@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import MaxWidth from "@/components/MaxWidthProvider";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
+import SideBar from "./component/SideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,11 +38,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MaxWidth>
-            <Header />
-            {children}
-            <Footer />
-            </MaxWidth>
+          <MaxWidth className="flex flex-col md:flex-row">
+            <Header className="md:hidden" />
+            <SideBar className="hidden md:flex" />
+            <div className="px-4 py-16 md:py-28 flex-1">{children}</div>
+            <Footer className="md:hidden" />
+          </MaxWidth>
         </ThemeProvider>
       </body>
     </html>
