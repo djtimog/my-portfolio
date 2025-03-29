@@ -23,7 +23,7 @@ function SideBar({ className }: { className?: string }) {
           <div className="w-20 h-20 mx-auto mb-5 relative">
             <Avatar className="w-20 h-20">
               <AvatarImage src="/profileImage.jpg" className="object-cover" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>CO</AvatarFallback>
             </Avatar>
             <Button
               size={"icon"}
