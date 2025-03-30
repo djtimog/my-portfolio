@@ -35,17 +35,17 @@ export const navLinks = [
 export const socialLinks = [
   { 
     name: "Github", 
-    href: "/", 
+    href: "https://github.com/djtimog/", 
     icon: Github 
   },
   {
     name: "Twitter",
-    href: "/",
+    href: "https://x.com/darling23g",
     icon: Twitter,
   },
   {
     name: "LinkedIn",
-    href: "/",
+    href: "https://www.linkedin.com/in/ogunleye-timilehin-860502275/",
     icon: Linkedin,
   },
 ];
