@@ -94,9 +94,9 @@ export default function Home() {
             .
           </p>
         </div>
-        <div className="flex flex-wrap gap-7 my-7">
+        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 my-7">
           {languages.map((language) => (
-            <div className="fade-up w-full min-w-[288px] min-h-max space-y-4 p-5 bg-secondary" key={language.name}>
+            <div className="fade-up w-full min-h-max space-y-4 p-5 bg-secondary hover:border-2 border-primary" key={language.name}>
               <language.icon className="w-12 h-auto" />
               <h2 className="text-2xl font-bold">{language.name}</h2>
               <p className="text-lg">{language.description}</p>
