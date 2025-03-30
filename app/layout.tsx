@@ -41,7 +41,7 @@ export default function RootLayout({
           <MaxWidth className="flex flex-col md:flex-row">
             <Header className="md:hidden" />
             <SideBar className="hidden md:flex" />
-            <div className="px-4 py-16 md:py-28 flex-1">{children}</div>
+            <div className="px-4 pt-16 md:pt-28 pb-10 flex-1">{children}</div>
             <Footer className="md:hidden" />
           </MaxWidth>
         </ThemeProvider>

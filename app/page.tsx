@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
+import { languages } from "@/lib/data";
 import { TypingText } from "@/lib/type-word";
 import { ArrowRight, BookText, FileJson } from "lucide-react";
 import Image from "next/image";
@@ -93,6 +94,15 @@ export default function Home() {
             .
           </p>
         </div>
+        <div className="flex flex-wrap gap-7 my-7">
+          {languages.map((language) => (
+            <div className="fade-up w-full min-w-[288px] min-h-max space-y-4 p-5 bg-secondary" key={language.name}>
+              <language.icon className="w-12 h-auto" />
+              <h2 className="text-2xl font-bold">{language.name}</h2>
+              <p className="text-lg">{language.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div>
@@ -108,7 +118,11 @@ export default function Home() {
           </div>
           <div className="lg:flex items-center justify-center">
             <Link href={"/contact"}>
-            <Button className="rounded-full" size='lg'> <ArrowRight />Let&apos;s Get In Touch</Button>
+              <Button className="rounded-full" size="lg">
+                {" "}
+                <ArrowRight />
+                Let&apos;s Get In Touch
+              </Button>
             </Link>
           </div>
         </div>
