@@ -6,7 +6,7 @@ import MaxWidth from "@/components/MaxWidthProvider";
 import Header from "./_component/Header";
 import Footer from "./_component/Footer";
 import SideBar from "./_component/SideBar";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +41,7 @@ export default function RootLayout({
         >
           <MaxWidth className="flex flex-col md:flex-row">
             <Header className="md:hidden" />
-            <SideBar className="hidden md:flex" />
+              <SideBar className="hidden md:flex" />
             <div className="px-4 pt-16 md:pt-28 pb-10 flex-1">{children}</div>
             <Footer className="md:hidden" />
           </MaxWidth>
