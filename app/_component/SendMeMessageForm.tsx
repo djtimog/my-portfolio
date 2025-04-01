@@ -40,65 +40,65 @@ export type SendMessageData = {
   location?: string;
 };
 
-function SendMeMessageForm() {
-  const [saveMyDetails, isSaveMyDetails] = useState<boolean>(false);
-  const [loading, isLoading] = useState<boolean>(false);
-
-  function setCookie(name: string, value: string, expires: string) {
-    document.cookie = `${name}=${encodeURIComponent(
-      value
-    )}; expires=${expires}; path=/`;
-  }
-
-  function getCookie(name: string): string | null {
-    
-    const cookies = document.cookie.split("; ");
-    for (const cookie of cookies) {
-        const [key, ...valueParts] = cookie.split("=");
-        if (key === name) {
-            return decodeURIComponent(valueParts.join("="));
-        }
-    }
-    return null;
+function deleteCookie(name: string) {
+  window.document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
 }
 
-  function deleteCookie(name: string) {
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+function getCookie(name: string): string | null {
+  const cookies = window.document.cookie.split("; ");
+  for (const cookie of cookies) {
+    const [key, value] = cookie.split("=");
+    if (key === name) {
+      return JSON.parse(value)
+    }
   }
+  return null;
+}
 
-  function getUserData(): SendMessageData | null {
-    const cookieValue = getCookie("userData");
-    return cookieValue ? (JSON.parse(cookieValue) as SendMessageData) : null;
-  }
+function setCookie(name: string, value: string, days: number) {
+  const expires = new Date();
+  expires.setDate(expires.getDate() + days);
+
+  window.document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/; SameSite=Lax; Secure`;
+}
+
+function SendMeMessageForm() {
+
+  const [saveMyDetails, isSaveMyDetails] = useState<boolean>(false);
+  const [loading, isLoading] = useState<boolean>(false);
+  
 
   function handleSaveDetails(data: SendMessageData) {
-    setCookie(
-      "userData",
-      JSON.stringify(data),
-      "Tue, 03 Jun 2025 12:00:00 UTC"
-    );
+    setCookie("userEmail", JSON.stringify(data.email), 365 * 24 * 60 * 60);
+    setCookie("userName", JSON.stringify(data.username), 365 * 24 * 60 * 60);
   }
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: getUserData() || undefined,
+    defaultValues: {
+      username: getCookie("userName") || "",
+      email: getCookie("userEmail") || ""
+    }
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     isLoading(true);
+
+    console.log(saveMyDetails);
     if (saveMyDetails) {
       handleSaveDetails(data);
     } else {
-      deleteCookie("userData");
+      deleteCookie("userEmail");
+      deleteCookie("userName");
     }
 
     try {
-      // const response = await axios.post("/api/send_message", data);
-      toast("Message Sent", {
-        description: "Your message has been sent succesfully",
-      });
+      const response = await axios.post("/api/send_message", data);
+      console.log(response.data);
+      toast.success("Your message has been sent successfully");
     } catch (error) {
       console.error("Error sending message:", error);
+      toast.error("Your message didn't send. Please try again later.");
     } finally {
       isLoading(false);
     }
@@ -110,80 +110,82 @@ function SendMeMessageForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="grid w-full gap-6"
       >
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Your Name"
-                  {...field}
-                  className="w-full h-10"
-                  required
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Email"
-                  {...field}
-                  className="w-full h-10"
-                  required
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="phoneNumber"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number</FormLabel>
-              <FormControl>
-                <Input
-                  type="number"
-                  placeholder="Phone"
-                  {...field}
-                  className="w-full h-10"
-                  required
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="location"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Location</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Location"
-                  {...field}
-                  className="w-full h-10"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+       <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Username</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Your Name"
+                    {...field}
+                    className="w-full h-10"
+                    required
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Email"
+                    {...field}
+                    className="w-full h-10"
+                    required
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+  
+          <FormField
+            control={form.control}
+            name="phoneNumber"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input
+                    type="number"
+                    placeholder="Phone"
+                    {...field}
+                    className="w-full h-10"
+                    required
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+  
+          <FormField
+            control={form.control}
+            name="location"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Location</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Location"
+                    {...field}
+                    className="w-full h-10"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+       </div>
 
         <FormField
           control={form.control}
@@ -200,18 +202,17 @@ function SendMeMessageForm() {
 
         <div className="flex items-center space-x-2">
           <Checkbox
-            value={String(saveMyDetails)}
-            onChange={(e) =>
-              isSaveMyDetails((e.target as HTMLInputElement).checked)
-            }
+            checked={saveMyDetails} 
+            onCheckedChange={(checked) => isSaveMyDetails(checked === true)}
             id="save"
-            title="save details"
+            title="Save details"
           />
+
           <label
             htmlFor="save"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
-            Save my name, email, and website in this browser for the next time.
+            Save my name and email in this browser for the next time.
           </label>
         </div>
         <Button type="submit" disabled={loading}>

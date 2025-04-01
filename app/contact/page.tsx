@@ -64,7 +64,7 @@ export default function Contact() {
               </div>
             </div>
           </Link>
-          <div className="border-l-2 flex space-x-3 items-center p-2">
+          <div className="border-l-2 flex space-x-3 items-center p-2 cursor-pointer">
             <Globe className="h-10 w-10" />
             <div className="space-y-2">
               <p className="text-lg font-bold">Location</p>

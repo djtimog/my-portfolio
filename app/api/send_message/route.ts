@@ -28,8 +28,8 @@ export async function POST(request: Request) {
                     <h2 style="color: #007BFF;">New Message Received</h2>
                     <p><strong>Name:</strong> ${data.username}</p>
                     <p><strong>Email:</strong> ${data.email}</p>
-                    <p><strong>Phone:</strong> ${data.phoneNumber}</p>
-                    <p><strong>Location:</strong> ${data.location}</p>
+                    <p><strong>Phone:</strong> ${data?.phoneNumber}</p>
+                    <p><strong>Location:</strong> ${data?.location}</p>
                     <p><strong>Message:</strong></p>
                     <blockquote style="background-color: #f8f9fa; padding: 10px; border-left: 4px solid #007BFF;">
                         ${data.message}
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ success: "Email sent successfully!" });
+        return NextResponse.json({ success: "Message sent" });
     } catch (error) {
         console.error("Error sending email:", error);
         return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
