@@ -3,9 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import MaxWidth from "@/components/MaxWidthProvider";
-import Header from "./component/Header";
-import Footer from "./component/Footer";
-import SideBar from "./component/SideBar";
+import Header from "./_component/Header";
+import Footer from "./_component/Footer";
+import SideBar from "./_component/SideBar";
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
             <div className="px-4 pt-16 md:pt-28 pb-10 flex-1">{children}</div>
             <Footer className="md:hidden" />
           </MaxWidth>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
