@@ -109,6 +109,7 @@ function SendMeMessageForm() {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="grid w-full gap-6"
+
       >
        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4">
           <FormField

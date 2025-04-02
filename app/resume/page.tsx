@@ -1,6 +1,8 @@
+import { FadeIn } from "@/components/animation";
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
-import { Globe, Mail, MapPin, Phone } from "lucide-react";
+import { professionalSkills, socialLinks, technicalSkills } from "@/lib/data";
+import { Globe, Mail, MapPin, Phone, School } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,20 +11,23 @@ import { FaRegFilePdf } from "react-icons/fa6";
 export default function Resume() {
   return (
     <div className="space-y-11">
-      <div className="space-y-4 text-center border-b pb-7">
-        <h2 className="font-bold text-2xl">Online Resume</h2>
-        <Button className="rounded-full">
-          <FaRegFilePdf />
-          Download PDF Version
-        </Button>
-      </div>
+      <FadeIn>
+        <div className="space-y-4 text-center border-b pb-7">
+          <h2 className="font-bold text-2xl">Online Resume</h2>
+          <Button className="rounded-full">
+            <FaRegFilePdf />
+            Download PDF Version
+          </Button>
+        </div>
+      </FadeIn>
 
-      <div className="border rounded-lg p-7 py-7 space-y-7">
+      <div className="border rounded-lg p-7 py-7 space-y-7 bg-secondary">
         <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between sm:items-center md:items-start lg:items-center border-b-2 p-4 gap-4">
           <div className="space-y-2">
             <h2 className="text-4xl font-bold">Christian Ogunleye</h2>
             <h6 className="text-lg">Junior Frontend Developer</h6>
           </div>
+
           <div className="sm:border-l-2 md:border-l-0 lg:border-l-2  space-y-2">
             <Link
               href="tel:+2348146289722"
@@ -51,15 +56,15 @@ export default function Resume() {
 
         <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between items-center border-b-2 p-4 pb-7 gap-4">
           <div>
-              <div className="max- w-[190px] h-[190px] overflow-hidden bg-red-500 rounded-full">
-                <Image
-                  src="/profileImage.jpg"
-                  alt="user"
-                  className="object-cover z-0"
-                  width={200}
-                  height={200}
-                />
-              </div>
+            <div className="max- w-[190px] h-[190px] overflow-hidden bg-red-500 rounded-full">
+              <Image
+                src="/profileImage.jpg"
+                alt="user"
+                className="object-cover z-0"
+                width={200}
+                height={200}
+              />
+            </div>
           </div>
           <p className="text-sm">
             I am Ogunleye Christian, a frontend developer with a strong passion
@@ -86,8 +91,67 @@ export default function Resume() {
           </p>
         </div>
 
-        {/* two more */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 border-b-2 p-4 pb-7 gap-4">
+          <div className="lg:col-span-2 px-4">{/* work experience */}</div>
+
+          <div className="sm:border-l-2 md:border-l-0 lg:border-l-2 sm:px-4 md:px-0 lg:px-5">
+            <div>
+              <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
+                Skills
+              </h1>
+              <div className="mb-5">
+                <h1 className="text-xl font-bold mb-2">Technical Skills</h1>
+                <ul className="list-disc pl-7">
+                  {technicalSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mb-5">
+                <h1 className="text-xl font-bold mb-2">Professional Skills</h1>
+                <ul className="list-disc pl-7">
+                  {professionalSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
+                Educaion
+              </h1>
+              <div className="flex items-start gap-3">
+                <School />
+                <div>
+                  <h2 className="text-xl font-bold">
+                    Bachelor of Science degree(BSc) in Mathematics - Lagos State
+                    University(LASU), OJO, LAGOS STATE
+                  </h2>
+                  <p>2021 - 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-5 mt-3">
+          {socialLinks.map((link) => (
+            <Link href={link.href} key={link.name} className="max-w-max">
+              <Button
+                size="icon"
+                variant="outline"
+                className="rounded-full mx-3"
+              >
+                <link.icon />
+                <span className="sr-only">{link.name}</span>
+              </Button>
+              <span>{link.account}</span>
+            </Link>
+          ))}
+        </div>
       </div>
+
       <CopyRight />
     </div>
   );

@@ -66,7 +66,7 @@ function SideBar({ className }: { className?: string }) {
                 <Link
                   href={link.href}
                   key={link.name}
-                  className={`flex items-center hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md w-full
+                  className={`flex items-center hover:bg-gray-200 dark:hover:bg-gray-500 hover:text-black rounded-md w-full
                             ${
                               pathname === link.href
                                 ? "bg-primary text-white dark:text-black"
@@ -81,10 +81,12 @@ function SideBar({ className }: { className?: string }) {
               ))}
             </div>
 
-            <Button className="w-full rounded-full">
-              <Send />
-              <span>Hire Me</span>
-            </Button>
+           <Link href="/contact#send_me_message">
+              <Button className="w-full rounded-full">
+                <Send />
+                <span>Hire Me</span>
+              </Button>
+           </Link>
           </div>
         </div>
       </div>

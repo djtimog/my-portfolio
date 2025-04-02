@@ -23,7 +23,7 @@ function Footer({ className }: { className?: string }) {
           className={`flex items-center hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md w-full
                             ${
                               pathname === link.href
-                                ? "bg-primary text-white dark:text-black"
+                                ? "bg-primary text-white dark:text-black hover:text-black"
                                 : ""
                             }`}
         >

@@ -32,21 +32,25 @@ export const navLinks = [
     icon: Headset,
   },
 ];
+
 export const socialLinks = [
+  {
+    name: "Twitter",
+    href: "https://x.com/djtimog",
+    icon: Twitter,
+    account: "@djtimog"
+  },
   { 
     name: "Github", 
     href: "https://github.com/djtimog/", 
-    icon: Github 
-  },
-  {
-    name: "Twitter",
-    href: "https://x.com/darling23g",
-    icon: Twitter,
+    icon: Github,
+    account: "github.com/djtimog"
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ogunleye-timilehin-860502275/",
+    href: "https://www.linkedin.com/in/djtimog",
     icon: Linkedin,
+    account: "linkedin.com/in/djtimog"
   },
 ];
 
@@ -108,3 +112,26 @@ export const languages = [
   }
 ];
 
+export const technicalSkills = [
+  "HTML, CSS, Tailwind CSS, Bootstrap",
+  "JavaScript (ES6+), TypeScript",
+  "React.js, Next.js",
+  "State Management (Redux, Zustand, Context API)",
+  "RESTful APIs & GraphQL Integration",
+  "Component-Based Architecture & UI/UX Principles",
+  "Performance Optimization & Accessibility (a11y)",
+  "Version Control (Git, GitHub, GitLab)",
+  "Testing (Jest, React Testing Library, Cypress)",
+  "Responsive & Mobile-First Design",
+  "Collaboration with Backend Teams & API Consumption"
+];
+
+export const professionalSkills = [
+  "Excellent communication skills, both written and verbal",
+  "Strong team player with the ability to collaborate effectively in cross-functional teams",
+  "Analytical and solution-oriented mindset with a focus on creating efficient UI solutions",
+  "Effective time management and ability to meet deadlines in fast-paced environments",
+  "Adaptable and open to feedback for continuous learning and improvement",
+  "Leadership experience in guiding UI development and delivering complex projects",
+  "Passionate about building engaging, scalable, and high-performance web applications"
+];
