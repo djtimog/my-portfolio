@@ -135,3 +135,13 @@ export const professionalSkills = [
   "Leadership experience in guiding UI development and delivering complex projects",
   "Passionate about building engaging, scalable, and high-performance web applications"
 ];
+
+export const interests = [
+  "Sci-Fi & Horror Movies",
+  "Tech Contents",
+  "Programming Documentations & Articles",
+  "Online Games(Call of Duty)",
+  "Building Side Projects",
+  "Exploring New Frontend Tools & Trends"
+];
+

@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,55 +16,19 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-
-const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  email: z.string().email(),
-  phoneNumber: z.string().min(7).max(15).optional(),
-  location: z.string().min(10).optional(),
-  message: z.string().min(5, {
-    message: "Message should be at least 5 characters.",
-  }),
-});
-
-export type SendMessageData = {
-  message: string;
-  username: string;
-  email: string;
-  phoneNumber?: string;
-  location?: string;
-};
-
-function deleteCookie(name: string) {
-  window.document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-}
-
-function getCookie(name: string): string | null {
-  const cookies = window.document.cookie.split("; ");
-  for (const cookie of cookies) {
-    const [key, value] = cookie.split("=");
-    if (key === name) {
-      return JSON.parse(value)
-    }
-  }
-  return null;
-}
-
-function setCookie(name: string, value: string, days: number) {
-  const expires = new Date();
-  expires.setDate(expires.getDate() + days);
-
-  window.document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/; SameSite=Lax; Secure`;
-}
+import { SendMessageData, SendMessageFormSchemaType } from "@/lib/types";
+import { SendMessageFormSchema } from "@/lib/schema";
+import { deleteCookie, getCookie, setCookie } from "@/lib/cookies";
 
 function SendMeMessageForm() {
-
   const [saveMyDetails, isSaveMyDetails] = useState<boolean>(false);
   const [loading, isLoading] = useState<boolean>(false);
+  const [defaultValues, setDefaultValues] = useState({
+    username: "",
+    email: "",
+  });
   
 
   function handleSaveDetails(data: SendMessageData) {
@@ -73,15 +36,21 @@ function SendMeMessageForm() {
     setCookie("userName", JSON.stringify(data.username), 365 * 24 * 60 * 60);
   }
 
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: {
+  
+  useEffect(() => {
+    setDefaultValues({
       username: getCookie("userName") || "",
-      email: getCookie("userEmail") || ""
-    }
+      email: getCookie("userEmail") || "",
+    });
+  }, []);
+  
+  const form = useForm<SendMessageFormSchemaType>({
+    resolver: zodResolver(SendMessageFormSchema),
+    defaultValues,
   });
+  
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: SendMessageFormSchemaType) {
     isLoading(true);
 
     console.log(saveMyDetails);
