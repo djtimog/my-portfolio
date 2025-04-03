@@ -151,7 +151,8 @@
   height: 3px;
   background-color: transparent;
 }
-.cus-scrollbar::-webkit-scrollbar-button, .cus-scrollbar::-webkit-scrollbar-thumb {
+.cus-scrollbar::-webkit-scrollbar-button,
+.cus-scrollbar::-webkit-scrollbar-thumb {
   background: transparent;
   box-shadow: inset 0 0 5px grey;
 }
@@ -166,10 +167,10 @@
 .cus-scrollbar:hover::-webkit-scrollbar-track {
   background: var(--secondary);
 }
-.cus-scrollbar:hover::-webkit-scrollbar-button, .cus-scrollbar:hover::-webkit-scrollbar-thumb {
+.cus-scrollbar:hover::-webkit-scrollbar-button,
+.cus-scrollbar:hover::-webkit-scrollbar-thumb {
   background: var(--primary);
 }
-
 
 .banner-content .typing-text {
   color: var(--primary);
@@ -179,7 +180,8 @@
   animation: blink 1s step-end infinite;
 }
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -195,7 +197,8 @@
 }
 
 @keyframes rotatedBg {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(11.163deg);
   }
   50% {
@@ -210,6 +213,74 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.firstImageBlurIn {
+  animation: firstImageBlurringIn 0.5s ease-in-out forwards;
+}
+
+@keyframes firstImageBlurringIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.firstImageBlurOut {
+  animation: firstImageBlurringOut 0.5s ease-in-out forwards;
+}
+
+@keyframes firstImageBlurringOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+    filter: blur(10px);
+  }
+}
+
+.secondImageBlurIn {
+  animation: secondImageBlurringIn 0.5s ease-in-out forwards;
+}
+
+@keyframes secondImageBlurringIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.secondImageBlurOut {
+  animation: secondImageBlurringOut 0.5s ease-in-out forwards;
+}
+
+@keyframes secondImageBlurringOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.95);
+    filter: blur(10px);
+  }
 }

@@ -13,7 +13,7 @@ export default function Resume() {
     <div className="space-y-17">
       <FadeIn>
         <div className="space-y-4 text-center border-b pb-7">
-          <h2 className="font-bold text-2xl">Online Resume</h2>
+          <h2 className="font-bold text-4xl">Online Resume</h2>
           <Button className="rounded-full">
             <FaRegFilePdf />
             Download PDF Version

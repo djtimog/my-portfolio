@@ -12,7 +12,7 @@ export default function Contact() {
     <div className="space-y-10">
       <FadeIn>
         <div className="space-y-4 text-center border-b pb-7">
-          <h2 className="font-bold text-2xl">Contact</h2>
+          <h2 className="font-bold text-4xl">Contact</h2>
           <p>
             Interested in hiring me for your project or just want to say hi? You
             can fill in the contact form below or send me an email to{" "}
