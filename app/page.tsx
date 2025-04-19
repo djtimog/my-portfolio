@@ -15,14 +15,14 @@ export default function Home() {
         <div className="border-b-2 pb-10">
           <div className="grid lg:grid-cols-2 gap-10">
             <div>
-              <span className="text-2xl">HI, I'M A</span>
+              <span className="text-2xl">HI, I&apos;M A</span>
               <div className="banner-content">
                 <h2 className="typing-text text-5xl font-bold">
                   <TypingText />
                 </h2>
               </div>
               <p className="text-lg">
-                I'm a software engineer specializing in building scalable and
+                I&apos;m a software engineer specializing in building scalable and
                 efficient frontend web apps and websites. Explore my{" "}
                 <Link href="/portfolio" className="text-blue-500">
                   project portfolio

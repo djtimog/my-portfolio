@@ -100,7 +100,7 @@ export default function Contact() {
             <h1 className="border-l-4 text-4xl px-3 font-bold">Get in Touch</h1>
             <p>
               Have a project in mind or need to hire someone? Feel free to reach
-              out. Let's collaborate to bring your ideas to life and create
+              out. Let&apos;s collaborate to bring your ideas to life and create
               something amazing together.
             </p>
           </div>
