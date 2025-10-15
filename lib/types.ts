@@ -9,11 +9,17 @@ export type SendMessageData = {
   location?: string;
 };
 
-export type ProjectCardProps = {
+export type Project = {
   title: string;
-  path: string;
+  overview: string;
+  client: string;
+  services: string;
+  role: string;
+  technologies: string[];
+  features: string[];
   images: string[];
   liveHref: string;
-  technologies: string[];
+  githubHref: string;
+  path: string;
 };
 export type SendMessageFormSchemaType = z.infer<typeof SendMessageFormSchema>;

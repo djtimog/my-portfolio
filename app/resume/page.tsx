@@ -22,7 +22,7 @@ export default function Resume() {
       </FadeIn>
 
       <SlideInBottom>
-        <div className="border rounded-lg p-7 py-7 space-y-7 bg-secondary">
+        <div className="border rounded-lg p-7 space-y-7 bg-secondary">
           <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between sm:items-center md:items-start lg:items-center border-b-2 p-4 gap-4">
             <div className="space-y-2">
               <h2 className="text-4xl font-bold">Christian Ogunleye</h2>

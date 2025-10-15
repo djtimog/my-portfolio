@@ -2,6 +2,7 @@ import { FadeIn } from "@/components/animation";
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
 import { ProjectCard } from "@/components/ui/project-card";
+import { projects } from "@/lib/data";
 import { Send } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -28,14 +29,10 @@ export default function Portfolio() {
         </div>
       </FadeIn>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-7">
-        <ProjectCard
-          title="Blogging Platform"
-          technologies={["laravel", "livewire", "mysql"]}
-          path="project"
-          images={["/demo-app.webp", "/demo-app.png"]}
-          liveHref="#"
-        />
+      <div className="grid p-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-7">
+        {projects.map((project) => (
+          <ProjectCard project={project} key={project.path} />
+        ))}
       </div>
 
       <CopyRight />

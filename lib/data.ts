@@ -7,8 +7,17 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
-import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact, FaGitAlt, FaNodeJs } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaBootstrap,
+  FaReact,
+  FaGitAlt,
+  FaNodeJs,
+} from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiExpress, SiJson } from "react-icons/si";
+import { Project } from "./types";
 
 export const navLinks = [
   {
@@ -38,19 +47,19 @@ export const socialLinks = [
     name: "Twitter",
     href: "https://x.com/djtimog",
     icon: Twitter,
-    account: "@djtimog"
+    account: "@djtimog",
   },
-  { 
-    name: "Github", 
-    href: "https://github.com/djtimog/", 
+  {
+    name: "Github",
+    href: "https://github.com/djtimog/",
     icon: Github,
-    account: "github.com/djtimog"
+    account: "github.com/djtimog",
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/djtimog",
     icon: Linkedin,
-    account: "linkedin.com/in/djtimog"
+    account: "linkedin.com/in/djtimog",
   },
 ];
 
@@ -58,58 +67,69 @@ export const languages = [
   {
     name: "HTML",
     icon: FaHtml5,
-    description: "I use HTML to structure web content, providing the foundation for all web pages."
+    description:
+      "I use HTML to structure web content, providing the foundation for all web pages.",
   },
   {
     name: "CSS",
     icon: FaCss3Alt,
-    description: "I leverage CSS to style websites, ensuring responsive layouts and visually appealing designs."
+    description:
+      "I leverage CSS to style websites, ensuring responsive layouts and visually appealing designs.",
   },
   {
     name: "JavaScript",
     icon: FaJs,
-    description: "I use JavaScript to add interactivity, dynamic content, and logic to web applications."
+    description:
+      "I use JavaScript to add interactivity, dynamic content, and logic to web applications.",
   },
   {
     name: "Bootstrap",
     icon: FaBootstrap,
-    description: "I use Bootstrap to quickly build responsive and modern UI components with a mobile-first approach."
+    description:
+      "I use Bootstrap to quickly build responsive and modern UI components with a mobile-first approach.",
   },
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,
-    description: "I use Tailwind CSS to efficiently style applications with utility-first classes for rapid UI development."
+    description:
+      "I use Tailwind CSS to efficiently style applications with utility-first classes for rapid UI development.",
   },
   {
     name: "React",
     icon: FaReact,
-    description: "I develop interactive and reusable UI components using React for seamless user experiences."
+    description:
+      "I develop interactive and reusable UI components using React for seamless user experiences.",
   },
   {
     name: "Next.js",
     icon: SiNextdotjs,
-    description: "I use Next.js for server-side rendering, static site generation, and optimized performance in React apps."
+    description:
+      "I use Next.js for server-side rendering, static site generation, and optimized performance in React apps.",
   },
   {
     name: "Git",
     icon: FaGitAlt,
-    description: "I use Git for version control, enabling efficient collaboration and code management in development projects."
+    description:
+      "I use Git for version control, enabling efficient collaboration and code management in development projects.",
   },
   {
     name: "Node.js",
     icon: FaNodeJs,
-    description: "I use Node.js to build scalable backend services and handle asynchronous operations efficiently."
+    description:
+      "I use Node.js to build scalable backend services and handle asynchronous operations efficiently.",
   },
   {
     name: "Express.js",
     icon: SiExpress,
-    description: "I use Express.js to create RESTful APIs and backend services with minimal boilerplate."
+    description:
+      "I use Express.js to create RESTful APIs and backend services with minimal boilerplate.",
   },
   {
     name: "REST API",
     icon: SiJson,
-    description: "I design and consume RESTful APIs to enable seamless communication between frontend and backend systems."
-  }
+    description:
+      "I design and consume RESTful APIs to enable seamless communication between frontend and backend systems.",
+  },
 ];
 
 export const technicalSkills = [
@@ -123,7 +143,7 @@ export const technicalSkills = [
   "Version Control (Git, GitHub, GitLab)",
   "Testing (Jest, React Testing Library, Cypress)",
   "Responsive & Mobile-First Design",
-  "Collaboration with Backend Teams & API Consumption"
+  "Collaboration with Backend Teams & API Consumption",
 ];
 
 export const professionalSkills = [
@@ -133,7 +153,7 @@ export const professionalSkills = [
   "Effective time management and ability to meet deadlines in fast-paced environments",
   "Adaptable and open to feedback for continuous learning and improvement",
   "Leadership experience in guiding UI development and delivering complex projects",
-  "Passionate about building engaging, scalable, and high-performance web applications"
+  "Passionate about building engaging, scalable, and high-performance web applications",
 ];
 
 export const interests = [
@@ -142,6 +162,68 @@ export const interests = [
   "Programming Documentations & Articles",
   "Online Games(Call of Duty)",
   "Building Side Projects",
-  "Exploring New Frontend Tools & Trends"
+  "Exploring New Frontend Tools & Trends",
 ];
 
+export const projects: Project[] = [
+  {
+    title: "Blog Platform",
+    overview:
+      "A full-featured web app that allows users to create, read, update, and delete blog posts with user authentication and a clean design.",
+    client: "Personal Project",
+    services: "Web Development",
+    role: "Lead Developer",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MySQL"],
+    features: [
+      "User authentication and profiles",
+      "Rich text editor for posts",
+      "CRUD operations for blog posts",
+      "Responsive and minimal UI",
+      "Role-based access control",
+    ],
+    images: ["/demo-app.webp", "/demo-app.png"],
+    liveHref: "https://myblogplatform.com",
+    githubHref: "https://github.com/username/blog-platform",
+    path: "blog-platform",
+  },
+  {
+    title: "E-Commerce Store",
+    overview:
+      "An e-commerce website with secure checkout, product filtering, and admin management dashboard.",
+    client: "Freelance Project",
+    services: "Full Stack Development",
+    role: "Frontend & Backend Developer",
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    features: [
+      "Product search and filter",
+      "Cart and checkout system",
+      "Admin product management",
+      "Payment gateway integration",
+      "Customer order tracking",
+    ],
+    images: ["/demo-app.webp", "/demo-app.png"],
+    liveHref: "https://myecommercestore.com",
+    githubHref: "https://github.com/username/ecommerce-store",
+    path: "ecommerce-store",
+  },
+  {
+    title: "Weather Dashboard",
+    overview:
+      "A real-time weather dashboard that displays current conditions and forecasts for any city using OpenWeather API.",
+    client: "Hackathon Project",
+    services: "Frontend Development",
+    role: "UI Engineer",
+    technologies: ["Next.js", "TypeScript", "OpenWeather API", "Framer Motion"],
+    features: [
+      "Real-time weather updates",
+      "Forecast for multiple days",
+      "Location-based access (Geolocation API)",
+      "Animated UI transitions",
+      "Dark and light mode support",
+    ],
+    images: ["/demo-app.webp", "/demo-app.png"],
+    liveHref: "https://weatherdashboard.com",
+    githubHref: "https://github.com/username/weather-dashboard",
+    path: "weather-dashboard",
+  },
+];
