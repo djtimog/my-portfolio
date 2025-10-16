@@ -2,17 +2,18 @@
 import { useEffect, useState } from "react";
 
 export const TypingText = () => {
-  const typeArray = [
-    "Frontend Developer",
-    "React & Next.js Developer",
-    "Web Developer",
-  ];
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isAdding, setIsAdding] = useState(true);
   const [typeIndex, setTypeIndex] = useState(0);
 
   useEffect(() => {
+    const typeArray = [
+      "Frontend Developer",
+      "React & Next.js Developer",
+      "Web Developer",
+    ];
+
     const timeout = setTimeout(
       () => {
         if (isAdding) {
@@ -37,7 +38,7 @@ export const TypingText = () => {
     setText(typeArray[typeIndex].slice(0, index));
 
     return () => clearTimeout(timeout);
-  }, [index, isAdding, typeIndex, typeArray]);
+  }, [index, isAdding, typeIndex]);
 
   return text;
 };
