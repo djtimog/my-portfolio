@@ -21,5 +21,11 @@ export type Project = {
   liveHref: string;
   githubHref: string;
   path: string;
+
+  year?: string;
+  duration?: string;
+  projectType?: string;
+  highlight?: string;
 };
+
 export type SendMessageFormSchemaType = z.infer<typeof SendMessageFormSchema>;

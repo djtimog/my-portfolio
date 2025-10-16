@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Timog Portfolio – Frontend Developer
 
-## Getting Started
+Hi there! 👋  
+I'm **Ogunleye Christian Timileyin (Timog)** — a passionate **Frontend Developer** with a strong foundation in **Mathematics** and modern web technologies.  
+I specialize in building **interactive**, **responsive**, and **aesthetically engaging** web applications using **Next.js, React, Tailwind CSS, and TypeScript**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ⚡ **Modern UI/UX** built with Tailwind CSS and ShadCN UI  
+- 🧩 **Component-based architecture** for scalability  
+- 🌙 **Dark / Light theme support** (if you have it)  
+- 📱 **Responsive design** across devices  
+- 📄 **Downloadable Resume (PDF)**  
+- 💼 **Projects, Skills, and Contact sections**  
+- 🔗 Integrated **social links & contact form**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Tech Stack
 
-## Learn More
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | Next.js, React, TypeScript, Tailwind CSS |
+| **UI Components** | ShadCN UI, Lucide Icons, Framer Motion |
+| **State Management** | Zustand, Redux, Context API |
+| **Backend (Basics)** | REST API, GraphQL |
+| **Tools & Others** | Git, GitHub, Vercel, Figma |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 About Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> I’m a **20-year-old Mathematics graduate** turned **Frontend Developer**, passionate about crafting clean, responsive, and performant web interfaces.  
+> I love blending logic and creativity — solving problems through code while delivering seamless digital experiences.  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Folder Structure
+📦 my-portfolio
+┣ 📂 public
+┃ ┣ 📜 resume.pdf
+┃ ┣ 📸 profileImage.jpg
+┣ 📂 src
+┃ ┣ 📂 components
+┃ ┣ 📂 lib
+┃ ┣ 📂 pages (or app)
+┣ 📜 package.json
+┣ 📜 README.md
+┗ 📜 next.config.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧾 License
+
+This project is licensed under the MIT License — feel free to use and modify it for your own portfolio.
+
+📬 Contact
+
+Website: https://my-portfolio-one-pearl-59.vercel.app/
+
+Email: ogunleyetimilehin15@gmail.com
+
+GitHub: github.com/djtimog
+
+LinkedIn: linkedin.com/in/djtimog

@@ -12,18 +12,19 @@ export default function Portfolio() {
     <div className="space-y-17">
       <FadeIn>
         <div className="space-y-4 text-center border-b pb-7">
-          <h2 className="font-bold text-4xl">A Glimpse of My Projects</h2>
-          <p>
-            Over the years, I have refined my frontend development skills,
-            focusing on crafting responsive, user-friendly, and visually
-            engaging interfaces. Here are some standout projects that showcase
-            my expertise in modern frontend technologies, including React,
-            Next.js, and Tailwind CSS.
+          <h2 className="font-bold text-4xl">My Recent Works</h2>
+          <p className="text-lg text-muted-foreground">
+            I&apos;m passionate about turning creative ideas into clean,
+            responsive, and engaging web experiences. Below are some of my
+            favorite projects that highlight my skills in <strong>React</strong>
+            , <strong>Next.js</strong>, and <strong>Tailwind CSS</strong>. Each
+            project reflects my love for design, interactivity, and
+            problem-solving on the frontend.
           </p>
           <Link href="/contact#send_me_message">
-            <Button className="rounded-full" size={"lg"}>
+            <Button className="rounded-full mt-4" size={"lg"}>
               <Send />
-              <span>Hire Me</span>
+              <span>Let&apos;s Work Together</span>
             </Button>
           </Link>
         </div>

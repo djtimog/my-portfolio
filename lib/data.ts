@@ -6,6 +6,7 @@ import {
   Github,
   Twitter,
   Linkedin,
+  MessageCirclePlus,
 } from "lucide-react";
 import {
   FaHtml5,
@@ -60,6 +61,12 @@ export const socialLinks = [
     href: "https://www.linkedin.com/in/djtimog",
     icon: Linkedin,
     account: "linkedin.com/in/djtimog",
+  },
+  {
+    name: "Whatsapp",
+    href: "https://wa.me/+2347055354961",
+    icon: MessageCirclePlus,
+    account: "wa.me/+2347055354961",
   },
 ];
 
@@ -133,17 +140,13 @@ export const languages = [
 ];
 
 export const technicalSkills = [
-  "HTML, CSS, Tailwind CSS, Bootstrap",
-  "JavaScript (ES6+), TypeScript",
-  "React.js, Next.js",
-  "State Management (Redux, Zustand, Context API)",
-  "RESTful APIs & GraphQL Integration",
-  "Component-Based Architecture & UI/UX Principles",
-  "Performance Optimization & Accessibility (a11y)",
-  "Version Control (Git, GitHub, GitLab)",
-  "Testing (Jest, React Testing Library, Cypress)",
-  "Responsive & Mobile-First Design",
-  "Collaboration with Backend Teams & API Consumption",
+  "HTML, CSS, Tailwind CSS, Bootstrap.",
+  "JavaScript (ES6+), TypeScript.",
+  "React.js, Next.js.",
+  "RESTful APIs Integration.",
+  "Version Control (Git, GitHub).",
+  "Responsive & Mobile-First Design.",
+  "Collaboration with Backend Teams & API Consumption.",
 ];
 
 export const professionalSkills = [
@@ -152,78 +155,73 @@ export const professionalSkills = [
   "Analytical and solution-oriented mindset with a focus on creating efficient UI solutions",
   "Effective time management and ability to meet deadlines in fast-paced environments",
   "Adaptable and open to feedback for continuous learning and improvement",
-  "Leadership experience in guiding UI development and delivering complex projects",
   "Passionate about building engaging, scalable, and high-performance web applications",
 ];
 
 export const interests = [
-  "Sci-Fi & Horror Movies",
-  "Tech Contents",
+  "Sci-Fi, Thriller & Horror Movies",
   "Programming Documentations & Articles",
   "Online Games(Call of Duty)",
-  "Building Side Projects",
   "Exploring New Frontend Tools & Trends",
 ];
 
 export const projects: Project[] = [
   {
-    title: "Blog Platform",
+    title: "Tournament Hub Platform",
     overview:
-      "A full-featured web app that allows users to create, read, update, and delete blog posts with user authentication and a clean design.",
-    client: "Personal Project",
+      "A full-featured esports platform for hosting and managing tournaments, with real-time updates and role-based access control.",
+    client: "Self",
     services: "Web Development",
-    role: "Lead Developer",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MySQL"],
-    features: [
-      "User authentication and profiles",
-      "Rich text editor for posts",
-      "CRUD operations for blog posts",
-      "Responsive and minimal UI",
-      "Role-based access control",
+    role: "Full Stack Developer",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "ShadCN UI",
+      "Pusher",
+      "Clerk Auth",
     ],
-    images: ["/demo-app.webp", "/demo-app.png"],
-    liveHref: "https://myblogplatform.com",
-    githubHref: "https://github.com/username/blog-platform",
-    path: "blog-platform",
+    features: [
+      "User authentication with Clerk",
+      "Team creation and management",
+      "Tournament hosting and registration",
+      "Organizer and player dashboards",
+      "Real-time updates using Pusher",
+      "Feedback and announcements system",
+    ],
+    images: ["/images/tournament-hub.png"],
+    liveHref: "https://pixelcore.gg",
+    githubHref: "https://github.com/yourname/pixelcore",
+    path: "/projects/tournament-hub",
+    year: "2024",
+    duration: "Ongoing",
+    projectType: "Personal Project",
+    highlight:
+      "An esports hub where gamers can host tournaments, form teams, and manage matches in real time.",
   },
   {
-    title: "E-Commerce Store",
+    title: "Weather Forecast App",
     overview:
-      "An e-commerce website with secure checkout, product filtering, and admin management dashboard.",
-    client: "Freelance Project",
-    services: "Full Stack Development",
-    role: "Frontend & Backend Developer",
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
-    features: [
-      "Product search and filter",
-      "Cart and checkout system",
-      "Admin product management",
-      "Payment gateway integration",
-      "Customer order tracking",
-    ],
-    images: ["/demo-app.webp", "/demo-app.png"],
-    liveHref: "https://myecommercestore.com",
-    githubHref: "https://github.com/username/ecommerce-store",
-    path: "ecommerce-store",
-  },
-  {
-    title: "Weather Dashboard",
-    overview:
-      "A real-time weather dashboard that displays current conditions and forecasts for any city using OpenWeather API.",
-    client: "Hackathon Project",
+      "A clean, responsive weather app that provides real-time forecasts and location-based updates.",
+    client: "Self",
     services: "Frontend Development",
-    role: "UI Engineer",
-    technologies: ["Next.js", "TypeScript", "OpenWeather API", "Framer Motion"],
+    role: "Frontend Developer",
+    technologies: ["Next.js", "TypeScript", "OpenWeather API", "Tailwind CSS"],
     features: [
-      "Real-time weather updates",
-      "Forecast for multiple days",
-      "Location-based access (Geolocation API)",
-      "Animated UI transitions",
-      "Dark and light mode support",
+      "Live weather updates using API",
+      "Automatic location detection",
+      "Search by city or coordinates",
+      "Responsive UI with forecast display",
     ],
-    images: ["/demo-app.webp", "/demo-app.png"],
-    liveHref: "https://weatherdashboard.com",
-    githubHref: "https://github.com/username/weather-dashboard",
-    path: "weather-dashboard",
+    images: ["/images/weather-app.png"],
+    liveHref: "https://weather.timog.dev",
+    githubHref: "https://github.com/yourname/weather-app",
+    path: "/projects/weather-app",
+    year: "2024",
+    duration: "2 weeks",
+    projectType: "Personal Project",
+    highlight:
+      "Displays real-time weather and forecasts with location detection and a simple modern UI.",
   },
 ];

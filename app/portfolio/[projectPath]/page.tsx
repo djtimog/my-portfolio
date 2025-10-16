@@ -144,16 +144,26 @@ export default function Page() {
         <div className="grid lg:grid-cols-[1fr_200px] gap-7 mb-16">
           <div className="space-y-5">
             <h1 className="text-5xl font-bold">
-              Let&apos;s Work Together on Your Next Project
+              Let&apos;s Build Something Great Together
             </h1>
-            <p>
-              I am available for freelance projects. Hire me and get your
-              project done.
+            <p className="text-lg mt-3">
+              I&apos;m currently open to{" "}
+              <span className="font-semibold">
+                freelance work, internships,
+              </span>
+              and <span className="font-semibold">collaborative projects</span>.
+              If you&apos;re looking for a creative frontend developer
+              who&apos;s passionate about building beautiful and functional web
+              experiences, I&apos;d love to be part of your team or project.
+              <br />
+              <br />
+              Let&apos;s connect and turn your ideas into reality!
             </p>
           </div>
           <div className="lg:flex items-center justify-center">
             <Link href={"/contact"}>
               <Button className="rounded-full" size="lg">
+                {" "}
                 <ArrowRight />
                 Let&apos;s Get In Touch
               </Button>

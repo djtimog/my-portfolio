@@ -10,7 +10,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="px-7 sm:px-10 md:px-3 lg:px-5">
-
       <FadeIn>
         <div className="border-b-2 pb-10">
           <div className="grid lg:grid-cols-2 gap-10">
@@ -22,17 +21,20 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg">
-                I&apos;m a software engineer specializing in building scalable and
-                efficient frontend web apps and websites. Explore my{" "}
+                Im a passionate frontend developer and recent mathematics
+                graduate with a strong foundation in logic, problem-solving, and
+                clean UI design. I build responsive and user-friendly web apps
+                using modern frontend tools. Explore my{" "}
                 <Link href="/portfolio" className="text-blue-500">
-                  project portfolio
-                </Link>
-                , and{" "}
+                  Project portfolio
+                </Link>{" "}
+                and{" "}
                 <Link href="/resume" className="text-blue-500">
-                  online resume
-                </Link>
-                .
+                  Resume
+                </Link>{" "}
+                to learn more about my work.
               </p>
+
               <div className="flex space-x-3 mt-5">
                 <Button className="rounded-full" size="lg">
                   <FileJson />
@@ -77,25 +79,34 @@ export default function Home() {
       </FadeIn>
 
       <div className="py-10">
-
         <SlideInRight>
           <div>
-            <h1 className="border-l-4 text-5xl px-3 font-bold mb-5">What I Do</h1>
+            <h1 className="border-l-4 text-5xl px-3 font-bold mb-5">
+              What I Do
+            </h1>
             <p className="text-lg">
-              I specialize in frontend development with a focus on creating
-              engaging, responsive, and user-friendly web applications. With
-              expertise in modern frontend technologies, I design and develop
-              intuitive interfaces that enhance user experience. I build
-              applications that are fast, accessible, and visually appealing,
-              ensuring seamless interactions for users. Below is a quick overview
-              of the main technical skills and technologies I use. Want to find
-              out more about my experience? Check out my{" "}
+              I specialize in{" "}
+              <span className="font-semibold">frontend development</span>,
+              crafting clean, responsive, and engaging web interfaces. My goal
+              is to turn ideas into functional and visually appealing websites
+              that work seamlessly across all devices.
+              <br />
+              <br />
+              With a background in{" "}
+              <span className="font-semibold">mathematics</span>, I bring
+              logical thinking and precision into my code — ensuring every
+              project is well-structured and optimized for performance.
+              <br />
+              <br />
+              I&apos;m currently focused on improving my frontend skills while
+              expanding into full-stack development. Want to know more about
+              what I do? Check out my{" "}
               <Link href="/portfolio" className="text-blue-500">
-                project portfolio
-              </Link>
-              , and{" "}
+                Project portfolio
+              </Link>{" "}
+              or{" "}
               <Link href="/resume" className="text-blue-500">
-                online resume
+                Resume
               </Link>
               .
             </p>
@@ -113,20 +124,29 @@ export default function Home() {
             </SlideInBottom>
           ))}
         </div>
-
       </div>
 
       <div>
-
         <SlideInRight>
           <div className="grid lg:grid-cols-[1fr_200px] gap-7 mb-16">
             <div className="space-y-5">
               <h1 className="text-5xl font-bold">
-                Let&apos;s Work Together on Your Next Project
+                Let&apos;s Build Something Great Together
               </h1>
-              <p>
-                I am available for freelance projects. Hire me and get your
-                project done.
+              <p className="text-lg mt-3">
+                I&apos;m currently open to{" "}
+                <span className="font-semibold">
+                  freelance work, internships,
+                </span>
+                and{" "}
+                <span className="font-semibold">collaborative projects</span>.
+                If you&apos;re looking for a creative frontend developer
+                who&apos;s passionate about building beautiful and functional
+                web experiences, I&apos;d love to be part of your team or
+                project.
+                <br />
+                <br />
+                Let&apos;s connect and turn your ideas into reality!
               </p>
             </div>
             <div className="lg:flex items-center justify-center">

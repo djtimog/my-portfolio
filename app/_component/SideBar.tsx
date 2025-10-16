@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Header from "./Header";
 import clsx from "clsx";
@@ -25,7 +26,7 @@ function SideBar({ className }: { className?: string }) {
           <Header className="flex-col space-y-5 border-b-0 shadow-0" />
         </div>
 
-        <div className="w-full px-7 py-10 sticky top-0 border-r">
+        <div className="w-full px-7 py-10 sticky top-0 border-r flex flex-col justify-between">
           <div className="text-center border-b pb-7">
             <div className="w-20 h-20 mx-auto mb-5 relative">
               <Avatar className="w-20 h-20">
@@ -33,7 +34,7 @@ function SideBar({ className }: { className?: string }) {
                 <AvatarFallback>CO</AvatarFallback>
               </Avatar>
               <Button
-                size={"icon"}
+                size="icon"
                 className="absolute right-0 bottom-0 translate-x-1 translate-y-1 rounded-full text-lg"
               >
                 👋
@@ -42,15 +43,17 @@ function SideBar({ className }: { className?: string }) {
             </div>
 
             <h1 className="text-2xl font-bold">Christian Ogunleye</h1>
-            <h3 className="text-md">Junior Frontend Developer</h3>
+            <h3 className="text-md text-muted-foreground">
+              Frontend Developer
+            </h3>
 
             <div className="flex items-center justify-center space-x-2 mt-3">
               {socialLinks.map((link) => (
-                <Link href={link.href} key={link.name}>
+                <Link href={link.href} key={link.name} target="_blank">
                   <Button
                     size="icon"
                     variant="outline"
-                    className="rounded-full"
+                    className="rounded-full hover:bg-primary hover:text-white transition"
                   >
                     <link.icon />
                     <span className="sr-only">{link.name}</span>
@@ -60,33 +63,30 @@ function SideBar({ className }: { className?: string }) {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between w-full space-y-7">
-            <div className="flex flex-col space-y-3 mt-5 w-full items-start justify-center">
-              {navLinks.map((link) => (
-                <Link
-                  href={link.href}
-                  key={link.name}
-                  className={`flex items-center hover:bg-gray-200 dark:hover:bg-gray-500 hover:text-black rounded-md w-full
-                            ${
-                              pathname === link.href
-                                ? "bg-primary text-white dark:text-black"
-                                : ""
-                            }`}
-                >
-                  <div className="flex items-center space-x-2 p-2 w-full">
-                    <link.icon />
-                    <span className="w-full">{link.name}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+          <div className="flex flex-col space-y-3 mt-5">
+            {navLinks.map((link) => (
+              <Link
+                href={link.href}
+                key={link.name}
+                className={clsx(
+                  "flex items-center space-x-2 p-2 w-full rounded-md transition hover:bg-primary/10 hover:text-primary",
+                  pathname === link.href &&
+                    "bg-primary text-white dark:text-black font-medium"
+                )}
+              >
+                <link.icon />
+                <span>{link.name}</span>
+              </Link>
+            ))}
+          </div>
 
-           <Link href="/contact#send_me_message">
-              <Button className="w-full rounded-full">
-                <Send />
+          <div className="mt-10">
+            <Link href="/contact#send_me_message">
+              <Button className="w-full rounded-full flex items-center justify-center space-x-2">
+                <Send className="w-4 h-4" />
                 <span>Hire Me</span>
               </Button>
-           </Link>
+            </Link>
           </div>
         </div>
       </div>
