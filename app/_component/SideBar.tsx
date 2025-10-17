@@ -35,7 +35,7 @@ function SideBar({ className }: { className?: string }) {
               </Avatar>
               <Button
                 size="icon"
-                className="absolute right-0 bottom-0 translate-x-1 translate-y-1 rounded-full text-lg"
+                className="absolute right-0 bottom-0 translate-x-1 translate-y-1 rounded-full text-lg wave-hover"
               >
                 👋
                 <span className="sr-only">Hey</span>

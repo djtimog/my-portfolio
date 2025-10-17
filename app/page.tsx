@@ -1,13 +1,16 @@
 import { FadeIn, SlideInBottom, SlideInRight } from "@/components/animation";
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
-import { languages } from "@/lib/data";
+import { languages, projects } from "@/lib/data";
 import { TypingText } from "@/lib/type-word";
 import { ArrowRight, BookText, FileJson } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const date = new Date();
+  // const startingDate = new Date("April 29, 2024");
+
   return (
     <div className="px-7 sm:px-10 md:px-3 lg:px-5">
       <FadeIn>
@@ -21,7 +24,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg">
-                Im a passionate frontend developer and recent mathematics
+                I&apos;m a passionate frontend developer and recent mathematics
                 graduate with a strong foundation in logic, problem-solving, and
                 clean UI design. I build responsive and user-friendly web apps
                 using modern frontend tools. Explore my{" "}
@@ -36,14 +39,18 @@ export default function Home() {
               </p>
 
               <div className="flex space-x-3 mt-5">
-                <Button className="rounded-full" size="lg">
-                  <FileJson />
-                  View Portfolio
-                </Button>
-                <Button className="rounded-full" size="lg">
-                  <BookText />
-                  View Resume
-                </Button>
+                <Link href="/portfolio" className="cursor-pointer">
+                  <Button className="rounded-full" size="lg">
+                    <FileJson />
+                    View Portfolio
+                  </Button>
+                </Link>
+                <Link href="/resume" className="cursor-pointer">
+                  <Button className="rounded-full" size="lg">
+                    <BookText />
+                    View Resume
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="flex items-center justify-center">
@@ -64,13 +71,13 @@ export default function Home() {
           <div className="mt-10 md:mt-16 gap-7 flex flex-wrap">
             <div className="text-lg flex items-center">
               <span className="text-gray-500 font-bold text-5xl pr-2 mr-2 border-r-3">
-                1+
+                {date.getFullYear() - 2024}+
               </span>{" "}
               Years of Experience
             </div>
             <div className="text-lg flex items-center">
               <span className="text-gray-500 font-bold text-5xl pr-2 mr-2 border-r-3">
-                7+
+                {projects.length}+
               </span>{" "}
               Projects Completed
             </div>

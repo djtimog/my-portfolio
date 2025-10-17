@@ -216,6 +216,29 @@ export default function Resume() {
                   ))}
                 </div>
               </div>
+            </div>
+
+            <div className="sm:border-l-2 md:border-l-0 lg:border-l-2 sm:px-4 md:px-0 lg:px-5 space-y-7">
+              <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
+                Skills
+              </h1>
+              <div className="mb-5">
+                <h1 className="text-xl font-bold mb-2">Technical Skills</h1>
+                <ul className="list-disc pl-7 space-y-2">
+                  {technicalSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mb-5">
+                <h1 className="text-xl font-bold mb-2">Professional Skills</h1>
+                <ul className="list-disc pl-7 space-y-2">
+                  {professionalSkills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
 
               <div>
                 <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
@@ -237,28 +260,7 @@ export default function Resume() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="sm:border-l-2 md:border-l-0 lg:border-l-2 sm:px-4 md:px-0 lg:px-5 space-y-7">
-              <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
-                Skills
-              </h1>
-              <div className="mb-5">
-                <h1 className="text-xl font-bold mb-2">Technical Skills</h1>
-                <ul className="list-disc pl-7 space-y-2">
-                  {technicalSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mb-5">
-                <h1 className="text-xl font-bold mb-2">Professional Skills</h1>
-                <ul className="list-disc pl-7 space-y-2">
-                  {professionalSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
               <div>
                 <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
                   Interests

@@ -37,7 +37,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <div>
         <div
           ref={projectImageBoxRef}
-          className="h-[350px] relative overflow-hidden"
+          className="h-[300px] relative overflow-hidden"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -49,7 +49,7 @@ export function ProjectCard({ project }: { project: Project }) {
               }}
               src={image}
               alt={`${project.path} image ${index}`}
-              width={350}
+              width={800}
               height={350}
               className={`w-full h-full absolute top-0 left-0 ${
                 index === 0 ? "firstImageBlurIn" : "secondImageBlurOut"

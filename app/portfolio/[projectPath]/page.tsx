@@ -61,7 +61,7 @@ export default function Page() {
             Project Details
           </h2>
 
-          <div className="gap-7 flex flex-col lg:flex-row">
+          <div className="gap-7 flex flex-col">
             <div className="border p-4 rounded-lg space-y-3">
               <div>
                 <p className="text-lg">Client:</p>
@@ -79,7 +79,7 @@ export default function Page() {
                 <p className="text-lg">Technologies:</p>
                 <ul className="list-none text-xl font-bold flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <li key={tech}>{tech}</li>
+                    <li key={tech}>| {tech} |</li>
                   ))}
                 </ul>
               </div>
@@ -107,13 +107,13 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex-1 w-full max-h-[400px]">
+            <div className="flex-1 w-full h-[400px]">
               <Image
-                src={project.images[0]}
+                src={project.images[1]}
                 alt={project.title}
                 width={800}
                 height={400}
-                className="rounded-lg w-full h-full object-cover"
+                className="rounded-lg w-full h-full object-cover overflow-hidden"
               />
             </div>
           </div>
