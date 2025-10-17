@@ -133,6 +133,27 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="pb-10">
+        <SlideInRight>
+          <div>
+            <h1 className="text-center text-4xl px-3 font-bold mb-5">
+              Where I See Myself in 5 Years
+            </h1>
+            <p className="text-lg">
+              In five years, I see myself as a highly skilled Frontend Engineer
+              contributing to impactful digital products that reach thousands of
+              users. I want to be part of a team that values creativity,
+              accessibility, and performance — where I can design and develop
+              intuitive interfaces that make technology feel effortless. I also
+              see myself mentoring upcoming developers, sharing what I&apos;ve
+              learned along the way, and continuously growing into a more
+              well-rounded developer with deeper knowledge of full-stack
+              development and UI/UX design principles.
+            </p>
+          </div>
+        </SlideInRight>
+      </div>
+
       <div>
         <SlideInRight>
           <div className="grid lg:grid-cols-[1fr_200px] gap-7 mb-16">
