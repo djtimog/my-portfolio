@@ -224,11 +224,11 @@ export const projects: Project[] = [
       "Responsive UI with forecast display",
     ],
     images: ["/project/weather-01.png", "/project/weather-02.png"],
-    liveHref: "https://weather.vercel.app",
+    liveHref: "https://weather-pi-one-74.vercel.app/",
     githubHref: "https://github.com/djtimog/weather",
     path: "weather-app",
     year: "2024",
-    duration: "1 weeks",
+    duration: "3 days",
     projectType: "Personal Project",
     highlight:
       "Displays real-time weather and forecasts with location detection and a simple modern UI.",
