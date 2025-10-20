@@ -223,7 +223,7 @@ export const projects: Project[] = [
       "Search by city or coordinates",
       "Responsive UI with forecast display",
     ],
-    images: ["/project/weather-01.png", "/project/weather-02.png"],
+    images: ["/project/sky-watch-01.png", "/project/sky-watch-02.png"],
     liveHref: "https://weather-pi-one-74.vercel.app/",
     githubHref: "https://github.com/djtimog/weather",
     path: "weather-app",
