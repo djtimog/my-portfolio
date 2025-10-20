@@ -26,7 +26,7 @@ function SideBar({ className }: { className?: string }) {
           <Header className="flex-col space-y-5 border-b-0 shadow-0" />
         </div>
 
-        <div className="w-full px-7 py-10 sticky top-0 border-r flex flex-col justify-between">
+        <div className="w-full px-7 py-10 sticky top-0 border-r flex flex-col">
           <div className="text-center border-b pb-7">
             <div className="w-20 h-20 mx-auto mb-5 relative">
               <Avatar className="w-20 h-20">

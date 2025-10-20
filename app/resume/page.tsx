@@ -9,13 +9,25 @@ import {
   socialLinks,
   technicalSkills,
 } from "@/lib/data";
-import { Globe, Mail, MapPin, Phone, School } from "lucide-react";
+import {
+  ChevronsDown,
+  ChevronsUp,
+  Globe,
+  Mail,
+  MapPin,
+  Phone,
+  School,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaRegFilePdf } from "react-icons/fa6";
 
 export default function Resume() {
+  const [wantMore, setWantMore] = useState(false);
+  const lessProjects = projects.slice(0, 3);
+  const viewedProjects = wantMore ? projects : lessProjects;
+
   return (
     <div className="space-y-17">
       <FadeIn>
@@ -176,7 +188,7 @@ export default function Resume() {
                   Projects
                 </h1>
                 <div className="space-y-8">
-                  {projects.map((project, index) => (
+                  {viewedProjects.map((project, index) => (
                     <div key={index} className="space-y-3">
                       <div className="flex justify-between items-center">
                         <h2 className="text-lg font-bold">{project.title}</h2>
@@ -214,6 +226,22 @@ export default function Resume() {
                         )}
                     </div>
                   ))}
+                  <div className="flex justify-end mt-2">
+                    <p
+                      onClick={() => setWantMore(!wantMore)}
+                      className="text-sm font-medium cursor-pointer text-muted-foreground w-max"
+                    >
+                      {wantMore ? (
+                        <span className="flex items-center space-x-2">
+                          Less <ChevronsUp size={20} />
+                        </span>
+                      ) : (
+                        <span className="flex items-center space-x-2">
+                          More <ChevronsDown size={20} />
+                        </span>
+                      )}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
