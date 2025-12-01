@@ -8,7 +8,11 @@ export type SendMessageData = {
   phoneNumber?: string;
   location?: string;
 };
-
+export type ReferenceType = {
+  label: string;
+  value: string;
+  link?: string;
+};
 export type Project = {
   title: string;
   overview: string;
@@ -21,7 +25,7 @@ export type Project = {
   liveHref: string;
   githubHref: string;
   path: string;
-
+  references: ReferenceType[];
   year?: string;
   duration?: string;
   projectType?: string;

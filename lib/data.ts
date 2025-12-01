@@ -202,7 +202,29 @@ export const projects: Project[] = [
     projectType: "Personal Project",
     highlight:
       "An esports hub where gamers can host tournaments, form teams, and manage matches in real time.",
+    references: [
+      {
+        label: "Design",
+        value: "Figma Wireframes",
+        link: "https://www.figma.com/design/rlvPx8Ga2ACVfqKkmMTZwe/Esport-Gaming-Team-Landing-Page--Community-?m=auto&t=HLJAtxGEbzJk8Zvh-6",
+      },
+      {
+        label: "Inspiration",
+        value: "Call of Duty Mobile; I was inspired by the love of this game",
+      },
+      {
+        label: "Realtime",
+        value: "Pusher Docs",
+        link: "https://pusher.com/docs",
+      },
+      {
+        label: "Auth",
+        value: "Clerk Documentation",
+        link: "https://clerk.com/docs",
+      },
+    ],
   },
+
   {
     title: "Weather Forecast App",
     overview:
@@ -232,7 +254,25 @@ export const projects: Project[] = [
     projectType: "Personal Project",
     highlight:
       "Displays real-time weather and forecasts with location detection and a simple modern UI.",
+    references: [
+      {
+        label: "API",
+        value: "OpenWeather API",
+        link: "https://openweathermap.org/api",
+      },
+      {
+        label: "Design",
+        value: "Frontend Mentor challenge",
+        link: "https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49",
+      },
+      {
+        label: "Inspiration",
+        value: "Frontend Mentor challenge",
+        link: "https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49",
+      },
+    ],
   },
+
   {
     title: "Next.js Dashboard App",
     overview:
@@ -265,7 +305,25 @@ export const projects: Project[] = [
     projectType: "Learning Project",
     highlight:
       "A comprehensive learning project from the Next.js official tutorial that demonstrates full-stack functionality with authentication and data management.",
+    references: [
+      {
+        label: "Tutorial",
+        value: "Next.js Official Guide",
+        link: "https://nextjs.org/learn",
+      },
+      {
+        label: "Auth",
+        value: "NextAuth Docs",
+        link: "https://authjs.dev",
+      },
+      {
+        label: "Database",
+        value: "Vercel Postgres Docs",
+        link: "https://vercel.com/docs/storage/vercel-postgres",
+      },
+    ],
   },
+
   {
     title: "Tic Tac Toe Game",
     overview:
@@ -290,7 +348,20 @@ export const projects: Project[] = [
     projectType: "Personal Project",
     highlight:
       "A simple yet engaging two-player Tic Tac Toe game showcasing game logic implementation, responsive design, and UI interaction in Next.js.",
+    references: [
+      {
+        label: "Logic Inspiration",
+        value: "React Tic Tac Toe Docs",
+        link: "https://react.dev/learn/tutorial-tic-tac-toe",
+      },
+      {
+        label: "Design",
+        value: "React Tic Tac Toe Docs",
+        link: "https://react.dev/learn/tutorial-tic-tac-toe",
+      },
+    ],
   },
+
   {
     title: "Language Academy Website",
     overview:
@@ -324,7 +395,25 @@ export const projects: Project[] = [
     projectType: "Team Project",
     highlight:
       "Developed a responsive and visually engaging homepage from a Figma design as part of the TeachMaster program. This project improved my design-to-code workflow and leadership experience.",
+    references: [
+      {
+        label: "Design",
+        value: "Figma Mockup",
+        link: "https://www.figma.com/design/5hb9TYUm3OrazIzQdXCV6R/languageacad?m=auto&t=HLJAtxGEbzJk8Zvh-6",
+      },
+      {
+        label: "Icons",
+        value: "Bootstrap Icons",
+        link: "https://icons.getbootstrap.com",
+      },
+      {
+        label: "Library",
+        value: "Swiper.js",
+        link: "https://swiperjs.com",
+      },
+    ],
   },
+
   {
     title: "Easybank Landing Page",
     overview:
@@ -348,5 +437,17 @@ export const projects: Project[] = [
     projectType: "Frontend Mentor Challenge",
     highlight:
       "My first Tailwind CSS project — focused on building a visually appealing, pixel-perfect homepage from a Figma design challenge.",
+    references: [
+      {
+        label: "Challenge",
+        value: "Frontend Mentor Design",
+        link: "https://frontendmentor.io",
+      },
+      {
+        label: "Design System",
+        value: "Easybank Style Guide",
+        link: "https://frontendmentor.io/challenges",
+      },
+    ],
   },
 ];

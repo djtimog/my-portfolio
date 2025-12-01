@@ -3,12 +3,13 @@
 import { FadeIn, SlideInBottom, SlideInRight } from "@/components/animation";
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
+import ProjectReferences from "@/components/ui/project-reference";
 import { projects } from "@/lib/data";
 import {
   ArrowLeftFromLine,
   ArrowRight,
-  ArrowRightFromLine,
   BadgeAlert,
+  ExternalLink,
   Send,
 } from "lucide-react";
 import Image from "next/image";
@@ -88,10 +89,10 @@ export default function Page() {
                 <Link
                   href={project.liveHref}
                   target="_blank"
-                  className="hover:text-blue-600 text-xl font-bold flex items-center gap-2"
+                  className="underline text-blue-500  text-xl font-bold flex items-center gap-2"
                 >
                   <span>Live Preview</span>
-                  <ArrowRightFromLine />
+                  <ExternalLink size={18} />
                 </Link>
               </div>
               <div>
@@ -99,10 +100,10 @@ export default function Page() {
                 <Link
                   href={project.githubHref}
                   target="_blank"
-                  className="hover:text-blue-600 text-xl font-bold flex items-center gap-2"
+                  className="underline text-blue-500  text-xl font-bold flex items-center gap-2"
                 >
                   <span>Source Code</span>
-                  <ArrowRightFromLine />
+                  <ExternalLink size={18} />
                 </Link>
               </div>
             </div>
@@ -130,6 +131,15 @@ export default function Page() {
               ))}
             </ul>
           </div>
+        </SlideInBottom>
+
+        <SlideInBottom>
+          <div>
+            <h3 className="font-bold text-4xl mb-4 text-center">References</h3>
+          </div>
+          {project.references.map((ref, index) => (
+            <ProjectReferences ref={ref} key={index} />
+          ))}
         </SlideInBottom>
 
         <FadeIn>
