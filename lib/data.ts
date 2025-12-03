@@ -167,6 +167,66 @@ export const interests = [
 
 export const projects: Project[] = [
   {
+    title: "Halloween AI Story Website",
+    overview:
+      "A Node.js-powered website that allows users to submit stories and uses AI to determine if a story is scary or not. Includes email subscription, story filtering, and a clean static frontend served with a custom Node HTTP server.",
+    client: "General Public (Readers & Horror Fans)",
+    services: "Backend Web App Development",
+    role: "Full Stack Developer",
+    technologies: [
+      "Node.js (HTTP server)",
+      "JavaScript",
+      "Gemini AI",
+      "Jest",
+      "HTML & CSS",
+      "Nodemailer",
+      "Node Cron",
+      "Sanitize Html",
+      "JSON-based data storage",
+    ],
+    features: [
+      "Custom Node.js server without Express",
+      "AI-powered scary story detection using Gemini",
+      "Story submission system (scary & non-scary)",
+      "Email subscription for daily stories",
+      "Jest testing with ignored files configuration",
+      "Static file serving for HTML/CSS/JS",
+      "Automatic metadata for SEO",
+      "Daily story scheduling support (optional)",
+    ],
+    images: ["/project/halloween-01.png", "/project/halloween-02.png"],
+    liveHref: "https://halloween-zyop.onrender.com",
+    githubHref: "https://github.com/djtimog/halloween",
+    path: "halloween-stories",
+    year: "2024",
+    duration: "1 Week",
+    projectType: "Personal Project",
+    highlight:
+      "An AI-enhanced Halloween storytelling site where users can submit stories, join a mailing list, and receive daily spooky stories powered by Gemini AI.",
+    references: [
+      {
+        label: "AI",
+        value: "Gemini API",
+        link: "https://ai.google.dev/",
+      },
+      {
+        label: "Testing",
+        value: "Jest Testing Framework",
+        link: "https://jestjs.io/",
+      },
+      {
+        label: "Email",
+        value: "Nodemailer Docs",
+        link: "https://nodemailer.com/",
+      },
+      {
+        label: "Inspiration",
+        value: "Scrimba Developer Project",
+        link: "https://www.youtube.com/watch?v=LzMnsfqjzkA&t=122109s",
+      },
+    ],
+  },
+  {
     title: "Tournament Hub Platform",
     overview:
       "A full-featured esports platform for hosting and managing tournaments, with real-time updates and role-based access control.",
