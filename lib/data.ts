@@ -167,6 +167,51 @@ export const interests = [
 
 export const projects: Project[] = [
   {
+    title: "ChefClaude AI Recipe",
+    overview:
+      "A Vite-powered React library that integrates AI models (Gemini and HuggingFace) to generate and suggest recipes based on user-provided ingredients. Designed as a reusable component library for modern web apps.",
+    client: "My Ex-Girlfriend",
+    services: "Frontend Library Development",
+    role: "Frontend Developer",
+    technologies: [
+      "Vite",
+      "React DOM",
+      "@google/genai",
+      "TypeScript",
+      "Plugin React (Vite)",
+    ],
+    features: [
+      "Reusable React components for recipe generation",
+      "Integration with Gemini AI APIs",
+      "Ingredient-based recipe suggestions",
+      "Lightweight Vite build system",
+      "Linting and hooks support via ESLint",
+      "Preview mode with Vite",
+      "TypeScript type safety for React components",
+    ],
+    images: ["/project/chefclaude-01.png", "/project/chefclaude-02.png"],
+    liveHref: "https://chef-claude-one.vercel.app/",
+    githubHref: "https://github.com/djtimog/Chef-Claude",
+    path: "chefclaude",
+    year: "2025",
+    duration: "1 Week",
+    projectType: "Personal Project",
+    highlight:
+      "A modern Vite + React library that leverages AI APIs to create intelligent recipe components for web developers.",
+    references: [
+      {
+        label: "AI",
+        value: "Gemini API",
+        link: "https://ai.google.dev/",
+      },
+      {
+        label: "Build Tool",
+        value: "Vite Docs",
+        link: "https://vitejs.dev/",
+      },
+    ],
+  },
+  {
     title: "Halloween AI Story Website",
     overview:
       "A Node.js-powered website that allows users to submit stories and uses AI to determine if a story is scary or not. Includes email subscription, story filtering, and a clean static frontend served with a custom Node HTTP server.",
@@ -198,7 +243,7 @@ export const projects: Project[] = [
     liveHref: "https://halloween-zyop.onrender.com",
     githubHref: "https://github.com/djtimog/halloween",
     path: "halloween-stories",
-    year: "2024",
+    year: "2025",
     duration: "1 Week",
     projectType: "Personal Project",
     highlight:
@@ -284,7 +329,6 @@ export const projects: Project[] = [
       },
     ],
   },
-
   {
     title: "Weather Forecast App",
     overview:
@@ -309,7 +353,7 @@ export const projects: Project[] = [
     liveHref: "https://weather-pi-one-74.vercel.app/",
     githubHref: "https://github.com/djtimog/weather",
     path: "weather-app",
-    year: "2024",
+    year: "2025",
     duration: "3 days",
     projectType: "Personal Project",
     highlight:
@@ -383,7 +427,6 @@ export const projects: Project[] = [
       },
     ],
   },
-
   {
     title: "Tic Tac Toe Game",
     overview:
@@ -421,7 +464,6 @@ export const projects: Project[] = [
       },
     ],
   },
-
   {
     title: "Language Academy Website",
     overview:
