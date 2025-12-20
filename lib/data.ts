@@ -342,6 +342,7 @@ export const projects: Project[] = [
       "OpenWeather API",
       "Tailwind CSS",
       "ShadCN UI",
+      "React Snowfall",
     ],
     features: [
       "Live weather updates using API",
