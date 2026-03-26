@@ -19,7 +19,7 @@ function SideBar({ className }: { className?: string }) {
       <div
         className={clsx(
           "flex sticky top-0 h-screen min-w-max bg-secondary",
-          className
+          className,
         )}
       >
         <div className="h-full border-r">
@@ -44,7 +44,7 @@ function SideBar({ className }: { className?: string }) {
 
             <h1 className="text-2xl font-bold">Christian Ogunleye</h1>
             <h3 className="text-md text-muted-foreground">
-              Frontend Developer
+              Full Stack Developer
             </h3>
 
             <div className="flex items-center justify-center space-x-2 mt-3">
@@ -71,7 +71,7 @@ function SideBar({ className }: { className?: string }) {
                 className={clsx(
                   "flex items-center space-x-2 p-2 w-full rounded-md transition hover:bg-primary/10 hover:text-primary",
                   pathname === link.href &&
-                    "bg-primary text-white dark:text-black font-medium"
+                    "bg-primary text-white dark:text-black font-medium",
                 )}
               >
                 <link.icon />

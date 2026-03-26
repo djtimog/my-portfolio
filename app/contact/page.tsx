@@ -16,7 +16,7 @@ export default function Contact() {
           <p className="text-lg">
             Whether you&apos;re looking to{" "}
             <span className="font-semibold">hire me</span> for a project,
-            discuss a potential collaboration, or just say hello — I&apos;d love
+            discuss a potential collaboration, or just say hello , I&apos;d love
             to hear from you! You can fill out the contact form below or email
             me directly at{" "}
             <Link

@@ -17,7 +17,7 @@ export default function Portfolio() {
             I&apos;m a self-taught developer with a strong foundation in
             <strong> Mathematics</strong> and a growing passion for the frontend
             world. Since I began learning web development in
-            <strong> April 2024</strong>, I&apos;ve come a long way — turning
+            <strong> April 2024</strong>, I&apos;ve come a long way , turning
             ideas into smooth, responsive, and visually appealing web
             experiences. Each project you&apos;ll find here reflects my love for
             <strong> design</strong>, <strong>interactivity</strong>, and

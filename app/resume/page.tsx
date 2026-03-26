@@ -3,11 +3,11 @@ import { FadeIn, SlideInBottom } from "@/components/animation";
 import { Button } from "@/components/ui/button";
 import { CopyRight } from "@/components/ui/copy-right";
 import {
+  experiences,
   interests,
-  professionalSkills,
   projects,
+  skills,
   socialLinks,
-  technicalSkills,
 } from "@/lib/data";
 import {
   ChevronsDown,
@@ -16,7 +16,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  School,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +24,7 @@ import { FaRegFilePdf } from "react-icons/fa6";
 
 export default function Resume() {
   const [wantMore, setWantMore] = useState(false);
-  const lessProjects = projects.slice(0, 3);
+  const lessProjects = projects.slice(0, 4);
   const viewedProjects = wantMore ? projects : lessProjects;
 
   return (
@@ -33,7 +32,11 @@ export default function Resume() {
       <FadeIn>
         <div className="space-y-4 text-center border-b pb-7">
           <h2 className="font-bold text-4xl">Online Resume</h2>
-          <Link href={"/resume.pdf"} target="_blank" download="resume.pdf">
+          <Link
+            href={"/resume-v02.pdf"}
+            target="_blank"
+            download="resume-v02.pdf"
+          >
             <Button className="rounded-full">
               <FaRegFilePdf />
               Download PDF Version
@@ -113,7 +116,7 @@ export default function Resume() {
               <br />
               <br />
               I&apos;m continuously learning new frameworks and tools to stay
-              updated with the latest development trends — always aiming to
+              updated with the latest development trends , always aiming to
               deliver modern, high-quality digital experiences. 🚀
             </p>
           </div>
@@ -126,60 +129,26 @@ export default function Resume() {
                 </h1>
 
                 <div className="space-y-7">
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-lg font-bold">
-                        Frontend Development Trainee
-                      </h2>
-                      <p className="text-sm text-muted-foreground">
-                        Tech Master Institute
-                      </p>
-                    </div>
-                    <p className="text-md font-semibold">2024 &ndash; 2025</p>
-                    <p className="mt-2 text-sm">
-                      Completed a hands-on training program focused on frontend
-                      technologies, learning to build responsive, scalable, and
-                      user-friendly web applications using React.js, Next.js,
-                      and REST APIs.
-                    </p>
-                    <ul className="list-disc pl-7 mt-2 text-sm space-y-1">
-                      <li>
-                        Built responsive user interfaces with React & Tailwind
-                        CSS.
-                      </li>
-                      <li>
-                        Integrated REST APIs and optimized frontend performance.
-                      </li>
-                      <li>
-                        Collaborated on team projects using Git and GitHub.
-                      </li>
-                    </ul>
-                  </div>
+                  {experiences.map((exp, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-lg font-bold">{exp.role}</h2>
+                        <p className="text-sm text-muted-foreground">
+                          {exp.company}
+                        </p>
+                      </div>
 
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-lg font-bold">
-                        Administrative Assistant (Siwes)
-                      </h2>
-                      <p className="text-sm text-muted-foreground">
-                        Local Government Council &ndash; Budget Department
-                      </p>
+                      <p className="text-md font-semibold">{exp.duration}</p>
+
+                      <p className="mt-2 text-sm">{exp.description}</p>
+
+                      <ul className="list-disc pl-7 mt-2 text-sm space-y-1">
+                        {exp.responsibilities.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
-                    <p className="text-md font-semibold">2024 (6 months)</p>
-                    <p className="mt-2 text-sm">
-                      Supported budget operations and data organization while
-                      developing strong analytical and teamwork skills.
-                    </p>
-                    <ul className="list-disc pl-7 mt-2 text-sm space-y-1">
-                      <li>
-                        Maintained accurate records and financial documents.
-                      </li>
-                      <li>Prepared and reviewed budget-related reports.</li>
-                      <li>
-                        Assisted in administrative and data organization tasks.
-                      </li>
-                    </ul>
-                  </div>
+                  ))}
                 </div>
               </div>
 
@@ -250,44 +219,25 @@ export default function Resume() {
               <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
                 Skills
               </h1>
-              <div className="mb-5">
-                <h1 className="text-xl font-bold mb-2">Technical Skills</h1>
-                <ul className="list-disc pl-7 space-y-2">
-                  {technicalSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
+              {skills.map((group, index) => (
+                <div key={index} className="mb-5">
+                  <h2 className="text-xl font-bold mb-2">{group.category}</h2>
 
-              <div className="mb-5">
-                <h1 className="text-xl font-bold mb-2">Professional Skills</h1>
-                <ul className="list-disc pl-7 space-y-2">
-                  {professionalSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">
-                  Education
-                </h1>
-                <div className="flex items-start gap-3">
-                  <div>
-                    <School size={23} strokeWidth={1.5} />
-                  </div>
-                  <div className="space-y-2">
-                    <h2 className="text-md font-bold">B.Sc. Mathematics</h2>
-                    <h4 className="text-sm font-semibold">
-                      Lagos State University (LASU), Ojo
-                    </h4>
-                    <p className="text-sm">2021 &ndash; 2025</p>
-                    <p className="text-sm text-muted-foreground">
-                      Second Class Lower Division
-                    </p>
-                  </div>
+                  <ul className="space-y-3">
+                    {group.items.map((skill, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <skill.icon className="text-lg mt-1" />
+                        <div>
+                          <p className="font-semibold">{skill.name}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {skill.description}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              ))}
 
               <div>
                 <h1 className="border-l-4 text-3xl px-3 font-bold mb-5">

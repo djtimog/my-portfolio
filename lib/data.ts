@@ -12,12 +12,28 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
-  FaBootstrap,
   FaReact,
   FaGitAlt,
   FaNodeJs,
+  FaLock,
+  FaPython,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiExpress, SiJson } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpress,
+  SiJson,
+  SiTypescript,
+  SiGraphql,
+  SiPostgresql,
+  SiMongodb,
+  SiPostman,
+  SiVitest,
+  SiTestinglibrary,
+  SiVercel,
+  SiCplusplus,
+  SiMysql,
+} from "react-icons/si";
 import { Project } from "./types";
 
 export const navLinks = [
@@ -75,87 +91,234 @@ export const languages = [
     name: "HTML",
     icon: FaHtml5,
     description:
-      "I use HTML to structure web content, providing the foundation for all web pages.",
+      "Semantic markup for structuring accessible and well-organized web pages.",
   },
   {
     name: "CSS",
     icon: FaCss3Alt,
     description:
-      "I leverage CSS to style websites, ensuring responsive layouts and visually appealing designs.",
+      "Responsive layouts and modern UI styling with best practices.",
   },
   {
     name: "JavaScript",
     icon: FaJs,
     description:
-      "I use JavaScript to add interactivity, dynamic content, and logic to web applications.",
+      "Core language for building dynamic and interactive web applications.",
   },
   {
-    name: "Bootstrap",
-    icon: FaBootstrap,
+    name: "TypeScript",
+    icon: SiTypescript,
     description:
-      "I use Bootstrap to quickly build responsive and modern UI components with a mobile-first approach.",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    description:
-      "I use Tailwind CSS to efficiently style applications with utility-first classes for rapid UI development.",
+      "Type-safe JavaScript for scalable and maintainable applications.",
   },
   {
     name: "React",
     icon: FaReact,
     description:
-      "I develop interactive and reusable UI components using React for seamless user experiences.",
+      "Component-based UI development with efficient state management.",
   },
   {
     name: "Next.js",
     icon: SiNextdotjs,
     description:
-      "I use Next.js for server-side rendering, static site generation, and optimized performance in React apps.",
+      "Full-stack React framework with routing, SSR, and performance optimization.",
   },
   {
-    name: "Git",
-    icon: FaGitAlt,
+    name: "Tailwind CSS",
+    icon: SiTailwindcss,
     description:
-      "I use Git for version control, enabling efficient collaboration and code management in development projects.",
+      "Utility-first CSS framework for rapid and consistent UI development.",
   },
   {
     name: "Node.js",
     icon: FaNodeJs,
     description:
-      "I use Node.js to build scalable backend services and handle asynchronous operations efficiently.",
+      "Backend runtime for building scalable APIs and server-side logic.",
   },
   {
     name: "Express.js",
     icon: SiExpress,
     description:
-      "I use Express.js to create RESTful APIs and backend services with minimal boilerplate.",
+      "Lightweight framework for building RESTful APIs and backend services.",
+  },
+  {
+    name: "GraphQL",
+    icon: SiGraphql,
+    description:
+      "Flexible data querying for efficient client-server communication.",
   },
   {
     name: "REST API",
     icon: SiJson,
     description:
-      "I design and consume RESTful APIs to enable seamless communication between frontend and backend systems.",
+      "Designing and consuming RESTful services for web applications.",
+  },
+  {
+    name: "PostgreSQL",
+    icon: SiPostgresql,
+    description:
+      "Relational database management for structured and scalable data.",
+  },
+  {
+    name: "MongoDB",
+    icon: SiMongodb,
+    description: "NoSQL database for flexible and document-based data storage.",
+  },
+  {
+    name: "Git",
+    icon: FaGitAlt,
+    description: "Version control and collaboration using Git and GitHub.",
+  },
+  {
+    name: "Testing",
+    icon: SiTestinglibrary,
+    description:
+      "Component and unit testing using Vitest and React Testing Library.",
   },
 ];
 
-export const technicalSkills = [
-  "HTML, CSS, Tailwind CSS, Bootstrap.",
-  "JavaScript (ES6+), TypeScript.",
-  "React.js, Next.js.",
-  "RESTful APIs Integration.",
-  "Version Control (Git, GitHub).",
-  "Responsive & Mobile-First Design.",
-  "Collaboration with Backend Teams & API Consumption.",
-];
+export const skills = [
+  {
+    category: "Frontend",
+    items: [
+      {
+        name: "HTML",
+        icon: FaHtml5,
+        description:
+          "Structuring web pages with semantic and accessible markup.",
+      },
+      {
+        name: "CSS",
+        icon: FaCss3Alt,
+        description: "Styling responsive layouts and modern UI designs.",
+      },
+      {
+        name: "JavaScript",
+        icon: FaJs,
+        description: "Building dynamic and interactive web applications.",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        description: "Writing type-safe and scalable JavaScript applications.",
+      },
+      {
+        name: "React",
+        icon: FaReact,
+        description:
+          "Building reusable UI components and managing state efficiently.",
+      },
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+        description: "Creating optimized React apps with SSR and routing.",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        description: "Rapid UI development using utility-first CSS framework.",
+      },
+    ],
+  },
 
-export const professionalSkills = [
-  "Excellent communication skills, both written and verbal",
-  "Strong team player with the ability to collaborate effectively in cross-functional teams",
-  "Analytical and solution-oriented mindset with a focus on creating efficient UI solutions",
-  "Effective time management and ability to meet deadlines in fast-paced environments",
-  "Adaptable and open to feedback for continuous learning and improvement",
-  "Passionate about building engaging, scalable, and high-performance web applications",
+  {
+    category: "Backend",
+    items: [
+      {
+        name: "Node.js",
+        icon: FaNodeJs,
+        description: "Building scalable backend services and APIs.",
+      },
+      {
+        name: "Express.js",
+        icon: SiExpress,
+        description: "Creating RESTful APIs and server-side logic.",
+      },
+      {
+        name: "GraphQL",
+        icon: SiGraphql,
+        description: "Efficient data fetching with flexible query structures.",
+      },
+      {
+        name: "REST APIs",
+        icon: SiJson,
+        description: "Designing and consuming RESTful services.",
+      },
+      {
+        name: "Authentication",
+        icon: FaLock,
+        description: "Implementing secure authentication systems (JWT, Clerk).",
+      },
+    ],
+  },
+
+  {
+    category: "Database",
+    items: [
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+        description: "Managing relational databases and structured data.",
+      },
+      {
+        name: "MongoDB",
+        icon: SiMongodb,
+        description: "Handling NoSQL data for flexible applications.",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        description: "Writing queries and managing relational databases.",
+      },
+    ],
+  },
+
+  {
+    category: "Tools & Testing",
+    items: [
+      {
+        name: "Git",
+        icon: FaGitAlt,
+        description: "Version control and collaboration using Git & GitHub.",
+      },
+      {
+        name: "Postman",
+        icon: SiPostman,
+        description: "Testing and debugging APIs.",
+      },
+      {
+        name: "Vitest",
+        icon: SiVitest,
+        description: "Unit and component testing for modern React apps.",
+      },
+      {
+        name: "React Testing Library",
+        icon: SiTestinglibrary,
+        description: "Testing UI components from a user perspective.",
+      },
+      {
+        name: "Vercel",
+        icon: SiVercel,
+        description: "Deploying and hosting frontend applications.",
+      },
+    ],
+  },
+
+  {
+    category: "Currently Learning",
+    items: [
+      {
+        name: "Python",
+        icon: FaPython,
+        description: "Backend development and scripting.",
+      },
+      {
+        name: "C/C++",
+        icon: SiCplusplus,
+        description: "Understanding low-level and system programming concepts.",
+      },
+    ],
+  },
 ];
 
 export const interests = [
@@ -165,7 +328,137 @@ export const interests = [
   "Exploring New Frontend Tools & Trends",
 ];
 
+export const experiences = [
+  {
+    role: "Backend Development Trainee",
+    company: "Spraditech",
+    duration: "2025 – Present",
+    description:
+      "Currently undergoing backend development training, focusing on server-side architecture, APIs, and system-level programming.",
+    responsibilities: [
+      "Learning backend development using Python and Node.js.",
+      "Building APIs and working with databases.",
+      "Exploring system programming concepts with C/C++.",
+    ],
+    type: "training",
+  },
+  {
+    role: "Frontend Development Trainee",
+    company: "Tech Master Institute",
+    duration: "2024 – 2025",
+    description:
+      "Completed a hands-on frontend training program focused on building responsive and user-friendly web applications.",
+    responsibilities: [
+      "Built responsive user interfaces with React and Tailwind CSS.",
+      "Integrated REST APIs and improved frontend performance.",
+      "Collaborated on team projects using Git and GitHub.",
+    ],
+    type: "training",
+  },
+  {
+    role: "Administrative Assistant (SIWES)",
+    company: "Local Government Council – Budget Department",
+    duration: "2024 (6 months)",
+    description:
+      "Supported budget operations and data organization while developing analytical and teamwork skills.",
+    responsibilities: [
+      "Maintained accurate records and financial documents.",
+      "Prepared and reviewed budget-related reports.",
+      "Assisted in administrative and data organization tasks.",
+    ],
+    type: "work",
+  },
+];
+
 export const projects: Project[] = [
+  {
+    title: "TaskFlow – Full Stack Task Management App",
+    overview:
+      "A full-stack task management application that allows users to create, manage, and track tasks with authentication and real-time state updates. Built with modern frontend and backend technologies.",
+    client: "Personal Project",
+    services: "Full Stack Development",
+    role: "Full Stack Developer",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "React Query",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "ShadCN UI",
+    ],
+    features: [
+      "User authentication with JWT",
+      "Create, update, and delete tasks",
+      "State management using Redux Toolkit",
+      "Server state handling with React Query",
+      "RESTful API built with Express",
+      "MongoDB database integration",
+      "Responsive UI with Tailwind CSS",
+    ],
+    images: ["/project/taskflow-01.png", "/project/taskflow-02.png"],
+    liveHref: "https://task-flow-dpj4.onrender.com/",
+    githubHref: "https://github.com/djtimog/task-flow",
+    path: "taskflow",
+    year: "2025",
+    duration: "1 week",
+    projectType: "Full Stack Project",
+    highlight:
+      "A complete full-stack task management system showcasing my ability to build scalable applications with authentication, API design, and modern frontend architecture.",
+    references: [
+      {
+        label: "Spraditech Welcome Test",
+        value: "Spraditech",
+        link: "https://spraditech.vercel.app",
+      },
+      {
+        label: "Full stack open",
+        value: "Fullstackopen",
+        link: "https://fullstackopen.com/",
+      },
+    ],
+  },
+  {
+    title: "Meme Generator App",
+    overview:
+      "An interactive meme generator that allows users to create and customize memes with draggable text, styling options, and image export functionality.",
+    client: "Personal Project",
+    services: "Frontend Development",
+    role: "Frontend Developer",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "html2canvas",
+    ],
+    features: [
+      "Drag and position text on images",
+      "Customize font, color, and size",
+      "Generate and download memes",
+      "Responsive and interactive UI",
+      "Canvas-based rendering using html2canvas",
+    ],
+    images: ["/project/meme-01.png", "/project/meme-02.png"],
+    liveHref: "https://meme-generator-six-rust.vercel.app/",
+    githubHref: "https://github.com/djtimog/meme-generator",
+    path: "meme-generator",
+    year: "2025",
+    duration: "3 days",
+    projectType: "Personal Project",
+    highlight:
+      "A fun and interactive meme generator showcasing advanced UI interactions, drag-and-drop functionality, and dynamic rendering.",
+    references: [
+      {
+        label: "Canva Design",
+        value: "canva",
+        link: "https://canva.com/",
+      },
+    ],
+  },
   {
     title: "ChefClaude AI Recipe",
     overview:
@@ -539,7 +832,7 @@ export const projects: Project[] = [
     duration: "2 days",
     projectType: "Frontend Mentor Challenge",
     highlight:
-      "My first Tailwind CSS project — focused on building a visually appealing, pixel-perfect homepage from a Figma design challenge.",
+      "My first Tailwind CSS project , focused on building a visually appealing, pixel-perfect homepage from a Figma design challenge.",
     references: [
       {
         label: "Challenge",

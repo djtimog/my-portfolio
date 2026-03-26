@@ -1,7 +1,7 @@
-# 🌐 Timog Portfolio — Frontend Developer
+# 🌐 Timog Portfolio , Frontend Developer
 
 Hi there! 👋  
-I'm **Ogunleye Christian Timileyin (Timog)** — a passionate **Frontend Developer** with a strong background in **Mathematics** and modern web technologies.  
+I'm **Ogunleye Christian Timileyin (Timog)** , a passionate **Frontend Developer** with a strong background in **Mathematics** and modern web technologies.  
 I specialize in building **interactive**, **responsive**, and **aesthetically engaging** web applications using **Next.js**, **React**, **Tailwind CSS**, and **TypeScript**.
 
 ---
@@ -33,21 +33,21 @@ I specialize in building **interactive**, **responsive**, and **aesthetically en
 ## 💡 About Me
 
 > I’m a **Mathematics graduate** turned **Frontend Developer**, passionate about crafting clean, responsive, and performant web interfaces.  
-> I love blending **logic and creativity** — solving problems through code while delivering seamless digital experiences.  
+> I love blending **logic and creativity** , solving problems through code while delivering seamless digital experiences.  
 
 ---
 
 ## 🌱 Growth Journey
 
 Since I began learning web development on **April 29, 2024**, I’ve come a long way.  
-From simple practice projects to building **full-stack Next.js applications** with authentication, real-time updates, and modern UI frameworks — every project showcases how much I’ve grown as a developer.  
+From simple practice projects to building **full-stack Next.js applications** with authentication, real-time updates, and modern UI frameworks , every project showcases how much I’ve grown as a developer.  
 
 
 ---
 
 ## 🧾 License
 
-This project is licensed under the **MIT License** — feel free to use and modify it for your own portfolio.
+This project is licensed under the **MIT License** , feel free to use and modify it for your own portfolio.
 
 ---
 

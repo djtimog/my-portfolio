@@ -9,9 +9,9 @@ export const TypingText = () => {
 
   useEffect(() => {
     const typeArray = [
-      "Frontend Developer",
+      "Full Stack Developer",
       "React & Next.js Developer",
-      "Web Developer",
+      "Web App Developer",
     ];
 
     const timeout = setTimeout(
@@ -32,7 +32,7 @@ export const TypingText = () => {
           }
         }
       },
-      isAdding ? 200 : 100
+      isAdding ? 200 : 100,
     );
 
     setText(typeArray[typeIndex].slice(0, index));
