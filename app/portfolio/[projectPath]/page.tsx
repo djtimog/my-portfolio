@@ -3,13 +3,15 @@ import ProjectPage from "@/app/_component/ProjectPage";
 export async function generateMetadata({
   params,
 }: {
-  params: { projectPath: string };
+  params: Promise<{ projectPath: string }>;
 }) {
+  const { projectPath } = await params;
+
   return {
-    title: `${params.projectPath.replace(/-/g, " ")} | Project`,
+    title: `${projectPath.replace(/-/g, " ")} | Project`,
     description: `A project by Christian Ogunleye (Djtimog). Built with modern full stack web technologies.`,
     alternates: {
-      canonical: `https://djtimog-portfolio.vercel.app/portfolio/${params.projectPath}`,
+      canonical: `https://djtimog-portfolio.vercel.app/portfolio/${projectPath}`,
     },
   };
 }
