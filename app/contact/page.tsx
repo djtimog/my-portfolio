@@ -6,6 +6,14 @@ import React from "react";
 import SendMeMessageForm from "../_component/SendMeMessageForm";
 import { CopyRight } from "@/components/ui/copy-right";
 import { FadeIn, SlideInBottom, SlideInRight } from "@/components/animation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Christian Ogunleye (Djtimog) — Full Stack Developer available for freelance, internships, and collaborative projects.",
+  alternates: { canonical: "https://djtimog-portfolio.vercel.app/contact" },
+};
 
 export default function Contact() {
   return (

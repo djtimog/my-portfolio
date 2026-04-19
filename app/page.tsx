@@ -4,8 +4,16 @@ import { CopyRight } from "@/components/ui/copy-right";
 import { languages, projects } from "@/lib/data";
 import { TypingText } from "@/lib/type-word";
 import { ArrowRight, BookText, FileJson } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Christian Ogunleye | Full Stack Developer",
+  description:
+    "Hi, I'm Christian Ogunleye (Djtimog) — a Full Stack Developer from Lagos, Nigeria. I build modern web apps using React, Next.js, Node.js, and PostgreSQL.",
+  alternates: { canonical: "https://djtimog-portfolio.vercel.app" },
+};
 
 export default function Home() {
   const date = new Date();
@@ -24,10 +32,11 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg">
-                I&apos;m a passionate frontend developer and recent mathematics
-                graduate with a strong foundation in logic, problem-solving, and
-                clean UI design. I build responsive and user-friendly web apps
-                using modern frontend tools. Explore my{" "}
+                I&apos;m a passionate full stack developer and recent
+                mathematics graduate with a strong foundation in logic,
+                problem-solving, and scalable application design. I build
+                end-to-end web applications using modern frontend and backend
+                technologies. Explore my{" "}
                 <Link href="/portfolio" className="text-blue-500">
                   Project portfolio
                 </Link>{" "}

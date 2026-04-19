@@ -6,6 +6,26 @@ import Header from "./_component/Header";
 import Footer from "./_component/Footer";
 import SideBar from "./_component/SideBar";
 import { Toaster } from "@/components/ui/sonner";
+import { Metadata } from "next";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Christian Ogunleye",
+  alternateName: "Djtimog",
+  url: "https://djtimog-portfolio.vercel.app",
+  jobTitle: "Full Stack Developer",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+  sameAs: [
+    "https://github.com/djtimog",
+    "https://linkedin.com/in/djtimog",
+    "https://x.com/djtimog",
+  ],
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,40 +37,51 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Timog | Frontend Developer Portfolio",
+export const metadata: Metadata = {
+  title: {
+    default: "Christian Ogunleye | Full Stack Developer",
+    template: "%s | Christian Ogunleye",
+  },
   description:
-    "Portfolio of Ogunleye Christian Timileyin (Timog), a passionate Frontend Developer specializing in React, Next.js, Tailwind CSS, and modern web technologies.",
+    "Christian Ogunleye (Djtimog) is a Full Stack Developer based in Lagos, Nigeria, specializing in React, Next.js, Node.js, PostgreSQL, MongoDB, MySQL, REST and GraphQL.",
   keywords: [
-    "Timog",
-    "Frontend Developer",
-    "React Developer",
+    "Christian Ogunleye",
+    "Ogunleye Christian Timilehin",
+    "Djtimog",
+    "Full Stack Developer Lagos",
+    "React Developer Nigeria",
     "Next.js Developer",
+    "Python Developer",
+    "Node.js Developer",
     "Portfolio",
-    "Web Developer",
-    "Tailwind CSS",
-    "JavaScript",
-    "TypeScript",
-    "Nigeria",
+    "Web Developer Nigeria",
+    "GraphQL Developer",
+    "REST API Developer",
+    "TypeScript Developer",
+    "LASU Graduate Developer",
   ],
   authors: [
     {
-      name: "Ogunleye Christian Timileyin",
-      url: "https://my-portfolio-one-pearl-59.vercel.app",
+      name: "Christian Ogunleye",
+      url: "https://djtimog-portfolio.vercel.app",
     },
   ],
+  metadataBase: new URL("https://djtimog-portfolio.vercel.app"),
+  alternates: {
+    canonical: "https://djtimog-portfolio.vercel.app",
+  },
   openGraph: {
-    title: "Timog | Frontend Developer Portfolio",
+    title: "Christian Ogunleye | Full Stack Developer",
     description:
-      "Explore my portfolio featuring modern web projects built with React, Next.js, and Tailwind CSS.",
-    url: "https://my-portfolio-one-pearl-59.vercel.app",
-    siteName: "Timog Portfolio",
+      "Full Stack Developer from Lagos, Nigeria. Building scalable web apps with React, Next.js, Node.js, and PostgreSQL.",
+    url: "https://djtimog-portfolio.vercel.app",
+    siteName: "Christian Ogunleye Portfolio",
     images: [
       {
         url: "/profileImage.jpg",
         width: 1200,
         height: 630,
-        alt: "Timog Portfolio Preview",
+        alt: "Christian Ogunleye - Full Stack Developer",
       },
     ],
     locale: "en_US",
@@ -58,9 +89,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Timog | Frontend Developer Portfolio",
+    title: "Christian Ogunleye | Full Stack Developer",
     description:
-      "Frontend Developer Portfolio built with Next.js and Tailwind CSS.",
+      "Full Stack Developer from Lagos. React, Next.js, Node.js, PostgreSQL, GraphQL.",
     creator: "@djtimog",
     images: ["/profileImage.jpg"],
   },
@@ -76,6 +107,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -4,8 +4,16 @@ import { CopyRight } from "@/components/ui/copy-right";
 import { ProjectCard } from "@/components/ui/project-card";
 import { projects } from "@/lib/data";
 import { Send } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Explore projects by Christian Ogunleye (Djtimog) — Full Stack web applications built with React, Next.js, Node.js, and PostgreSQL.",
+  alternates: { canonical: "https://djtimog-portfolio.vercel.app/portfolio" },
+};
 
 export default function Portfolio() {
   return (
