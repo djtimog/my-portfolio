@@ -24,7 +24,7 @@ import { FaRegFilePdf } from "react-icons/fa6";
 
 export default function Resume() {
   const [wantMore, setWantMore] = useState(false);
-  const lessProjects = projects.slice(0, 4);
+  const lessProjects = projects.slice(0, 5);
   const viewedProjects = wantMore ? projects : lessProjects;
 
   return (
@@ -50,9 +50,9 @@ export default function Resume() {
           <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between sm:items-center md:items-start lg:items-center border-b-2 p-4 gap-4">
             <div className="space-y-2">
               <h2 className="text-4xl font-bold">
-                Ogunleye Christian Timileyin
+                Christian Ogunleye, Timileyin
               </h2>
-              <h6 className="text-lg">Frontend Developer</h6>
+              <h6 className="text-lg">Full Stack Developer</h6>
               <p className="text-sm text-muted-foreground">
                 Also known as <strong>Djtimog</strong>
               </p>
@@ -100,24 +100,27 @@ export default function Resume() {
               </div>
             </div>
             <p className="text-sm">
-              I am <strong>Ogunleye Christian Timileyin</strong>, a passionate
-              <strong> Frontend Developer</strong> with a background in
-              <strong> Mathematics</strong>. I specialize in building
-              interactive, responsive, and visually appealing web interfaces
-              using modern technologies like <strong>React.js</strong>,
-              <strong> Next.js</strong>, <strong>Tailwind CSS</strong>, and
-              <strong> JavaScript (ES6+)</strong>.
+              I am <strong>Christian Ogunleye (Djtimog)</strong>, a passionate
+              <strong> Full Stack Developer</strong> with a background in
+              <strong> Mathematics</strong>. I build end-to-end web applications
+              using <strong>React.js</strong>, <strong>Next.js</strong>,
+              <strong> Node.js</strong>, <strong>Express</strong>,
+              <strong> PostgreSQL</strong>, and <strong>MongoDB</strong>,
+              covering everything from responsive UIs to RESTful APIs and
+              database design.
+              <br />
+              <br />I have hands-on experience with the{" "}
+              <strong>MERN stack</strong> and a growing foundation in{" "}
+              <strong>Python</strong> and backend architecture. I focus on
+              writing clean, maintainable code that performs well across all
+              devices, and I enjoy turning real-world problems into functional,
+              user-friendly applications.
               <br />
               <br />
-              I focus on crafting clean and maintainable code, ensuring smooth
-              performance, accessibility, and responsiveness across devices. I
-              enjoy working collaboratively, learning new technologies, and
-              turning creative ideas into functional web experiences.
-              <br />
-              <br />
-              I&apos;m continuously learning new frameworks and tools to stay
-              updated with the latest development trends , always aiming to
-              deliver modern, high-quality digital experiences. 🚀
+              I&apos;m continuously expanding my skills, currently deepening my
+              knowledge in <strong>TypeScript</strong>, <strong>GraphQL</strong>
+              , testing, and system-level programming, always aiming to grow
+              into a well-rounded engineer. 🚀
             </p>
           </div>
 

@@ -17,6 +17,7 @@ import {
   FaNodeJs,
   FaLock,
   FaPython,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -33,6 +34,9 @@ import {
   SiVercel,
   SiCplusplus,
   SiMysql,
+  SiC,
+  SiDotnet,
+  SiSharp,
 } from "react-icons/si";
 import { Project } from "./types";
 
@@ -310,12 +314,33 @@ export const skills = [
       {
         name: "Python",
         icon: FaPython,
-        description: "Backend development and scripting.",
+        description: "Backend development, scripting, and automation.",
       },
       {
-        name: "C/C++",
+        name: "C",
+        icon: SiC,
+        description:
+          "Low-level programming and memory management fundamentals.",
+      },
+      {
+        name: "C++",
         icon: SiCplusplus,
-        description: "Understanding low-level and system programming concepts.",
+        description: "System-level programming and object-oriented concepts.",
+      },
+      {
+        name: "C#",
+        icon: SiSharp,
+        description: "Building backend services and applications with .NET.",
+      },
+      {
+        name: ".NET",
+        icon: SiDotnet,
+        description: "Enterprise backend development with the .NET ecosystem.",
+      },
+      {
+        name: "Java",
+        icon: FaJava,
+        description: "Object-oriented programming and backend development.",
       },
     ],
   },

@@ -32,9 +32,9 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg">
-                I&apos;m a passionate full stack developer and recent
-                mathematics graduate with a strong foundation in logic,
-                problem-solving, and scalable application design. I build
+                I&apos;m Christian Ogunleye, a passionate full stack developer
+                and recent mathematics graduate with a strong foundation in
+                logic, problem-solving, and scalable application design. I build
                 end-to-end web applications using modern frontend and backend
                 technologies. Explore my{" "}
                 <Link href="/portfolio" className="text-blue-500">

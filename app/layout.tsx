@@ -7,6 +7,11 @@ import Footer from "./_component/Footer";
 import SideBar from "./_component/SideBar";
 import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
+import { skills } from "@/lib/data";
+
+const allSkills = skills.flatMap((category) =>
+  category.items.map((item) => item.name),
+);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -58,7 +63,9 @@ export const metadata: Metadata = {
     "GraphQL Developer",
     "REST API Developer",
     "TypeScript Developer",
+    "MERN Developer",
     "LASU Graduate Developer",
+    ...allSkills,
   ],
   authors: [
     {
