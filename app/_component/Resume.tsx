@@ -33,9 +33,9 @@ export default function Resume() {
         <div className="space-y-4 text-center border-b pb-7">
           <h2 className="font-bold text-4xl">Online Resume</h2>
           <Link
-            href={"/resume-v02.pdf"}
+            href={"/resume-v03.pdf"}
             target="_blank"
-            download="resume-v02.pdf"
+            download="resume-v03.pdf"
           >
             <Button className="rounded-full">
               <FaRegFilePdf />
