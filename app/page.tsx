@@ -32,11 +32,12 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg">
-                I&apos;m Christian Ogunleye, a passionate full stack developer
-                and recent mathematics graduate with a strong foundation in
-                logic, problem-solving, and scalable application design. I build
-                end-to-end web applications using modern frontend and backend
-                technologies. Explore my{" "}
+                I&apos;m Christian Ogunleye, a full stack developer and
+                Mathematics graduate with a strong foundation in logic,
+                problem-solving, and scalable application design. I build
+                end-to-end web applications and backend APIs using modern
+                technologies — from responsive React frontends to secure Node.js
+                services and production-ready databases. Explore my{" "}
                 <Link href="/portfolio" className="text-blue-500">
                   Project portfolio
                 </Link>{" "}
@@ -102,21 +103,28 @@ export default function Home() {
             </h1>
             <p className="text-lg">
               I specialize in{" "}
-              <span className="font-semibold">frontend development</span>,
-              crafting clean, responsive, and engaging web interfaces. My goal
-              is to turn ideas into functional and visually appealing websites
-              that work seamlessly across all devices.
+              <span className="font-semibold">full stack development</span>,
+              building clean, responsive frontends with React and Next.js
+              alongside robust backend APIs with Node.js and Express. I design
+              and manage both relational and NoSQL databases, implement secure
+              authentication systems, and deploy production-ready applications
+              end to end.
               <br />
               <br />
               With a background in{" "}
-              <span className="font-semibold">mathematics</span>, I bring
-              logical thinking and precision into my code , ensuring every
-              project is well-structured and optimized for performance.
+              <span className="font-semibold">Mathematics</span>, I bring
+              analytical thinking and precision into everything I build — from
+              architecting database schemas to debugging complex API behavior. I
+              also work with AI APIs, integrating LLMs like Claude and Gemini
+              into real products that solve everyday problems.
               <br />
               <br />
-              I&apos;m currently focused on improving my frontend skills while
-              expanding into full-stack development. Want to know more about
-              what I do? Check out my{" "}
+              I&apos;m currently expanding into{" "}
+              <span className="font-semibold">
+                Python, Go, and AI/ML engineering
+              </span>{" "}
+              to build faster, smarter backend systems. Want to know more? Check
+              out my{" "}
               <Link href="/portfolio" className="text-blue-500">
                 Project portfolio
               </Link>{" "}
@@ -149,15 +157,24 @@ export default function Home() {
               Where I See Myself in 5 Years
             </h1>
             <p className="text-lg">
-              In five years, I see myself as a highly skilled Frontend Engineer
-              contributing to impactful digital products that reach thousands of
-              users. I want to be part of a team that values creativity,
-              accessibility, and performance , where I can design and develop
-              intuitive interfaces that make technology feel effortless. I also
-              see myself mentoring upcoming developers, sharing what I&apos;ve
-              learned along the way, and continuously growing into a more
-              well-rounded developer with deeper knowledge of full-stack
-              development and UI/UX design principles.
+              In five years, I see myself as a well-rounded Software Engineer
+              working across the full stack and contributing to AI-powered
+              products that reach millions of users. I want to be part of a team
+              that values engineering quality, fast execution, and real impact —
+              where I can design scalable backend systems, ship meaningful
+              features, and help shape product direction with data and logic.
+              <br />
+              <br />
+              I also see myself going deep into AI/ML engineering — building
+              intelligent systems that go beyond standard API integrations and
+              into actual model deployment and automation pipelines. My
+              Mathematics background gives me a foundation to understand the
+              theory behind what I build, not just the syntax.
+              <br />
+              <br />
+              Long term, I want to build products of my own that solve real
+              problems in Africa and beyond — and mentor the next generation of
+              Nigerian developers coming up behind me.
             </p>
           </div>
         </SlideInRight>
@@ -173,14 +190,13 @@ export default function Home() {
               <p className="text-lg mt-3">
                 I&apos;m currently open to{" "}
                 <span className="font-semibold">
-                  freelance work, internships,
-                </span>
+                  internships, NYSC placements, freelance work,
+                </span>{" "}
                 and{" "}
                 <span className="font-semibold">collaborative projects</span>.
-                If you&apos;re looking for a creative frontend developer
-                who&apos;s passionate about building beautiful and functional
-                web experiences, I&apos;d love to be part of your team or
-                project.
+                If you&apos;re looking for a full stack developer who ships
+                clean, reliable software and genuinely cares about what gets
+                built, I&apos;d love to be part of your team or project.
                 <br />
                 <br />
                 Let&apos;s connect and turn your ideas into reality!

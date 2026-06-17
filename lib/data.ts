@@ -32,11 +32,8 @@ import {
   SiVitest,
   SiTestinglibrary,
   SiVercel,
-  SiCplusplus,
   SiMysql,
-  SiC,
-  SiDotnet,
-  SiSharp,
+  SiGo,
 } from "react-icons/si";
 import { Project } from "./types";
 
@@ -253,6 +250,11 @@ export const skills = [
         icon: FaLock,
         description: "Implementing secure authentication systems (JWT, Clerk).",
       },
+      {
+        name: "Python",
+        icon: FaPython,
+        description: "Backend development, automation, and AI/ML workflows.",
+      },
     ],
   },
 
@@ -312,35 +314,21 @@ export const skills = [
     category: "Currently Learning",
     items: [
       {
-        name: "Python",
-        icon: FaPython,
-        description: "Backend development, scripting, and automation.",
-      },
-      {
-        name: "C",
-        icon: SiC,
+        name: "Go",
+        icon: SiGo,
         description:
-          "Low-level programming and memory management fundamentals.",
-      },
-      {
-        name: "C++",
-        icon: SiCplusplus,
-        description: "System-level programming and object-oriented concepts.",
-      },
-      {
-        name: "C#",
-        icon: SiSharp,
-        description: "Building backend services and applications with .NET.",
-      },
-      {
-        name: ".NET",
-        icon: SiDotnet,
-        description: "Enterprise backend development with the .NET ecosystem.",
+          "High-performance backend development and system-level programming.",
       },
       {
         name: "Java",
         icon: FaJava,
-        description: "Object-oriented programming and backend development.",
+        description:
+          "Object-oriented programming and enterprise backend development.",
+      },
+      {
+        name: "Python (AI/ML)",
+        icon: FaPython,
+        description: "NumPy, scikit-learn, and machine learning pipelines.",
       },
     ],
   },
@@ -349,57 +337,89 @@ export const skills = [
 export const interests = [
   "Sci-Fi, Thriller & Horror Movies",
   "Programming Documentations & Articles",
-  "Online Games(Call of Duty)",
+  "Online Games (Call of Duty)",
   "Exploring New Frontend Tools & Trends",
+  "AI & Machine Learning",
 ];
 
 export const experiences = [
   {
-    role: "Backend Development Trainee",
+    role: "Backend Engineering Trainee",
     company: "Spraditech",
-    duration: "2025 – Present",
+    duration: "Jan 2026 – Present",
     description:
-      "Currently undergoing backend development training, focusing on server-side architecture, APIs, and system-level programming.",
+      "Undergoing structured backend engineering training focused on Python, Go, and Java for server-side development, alongside foundational exposure to AI/ML workflows.",
     responsibilities: [
-      "Learning backend development using Python and Node.js.",
-      "Building APIs and working with databases.",
-      "Exploring system programming concepts with C/C++.",
+      "Building server-side applications and RESTful APIs using Python and Node.js.",
+      "Structured training in Go for high-performance backend services.",
+      "Designing and querying relational (PostgreSQL, MySQL) and non-relational (MongoDB) databases.",
+      "Gaining foundational exposure to AI/ML workflows including NumPy and scikit-learn.",
+      "Utilizing AI development tools daily to accelerate learning and improve code quality.",
     ],
     type: "training",
   },
   {
     role: "Frontend Development Trainee",
     company: "Tech Master Institute",
-    duration: "2024 – 2025",
+    duration: "Apr 2024 – Apr 2025",
     description:
       "Completed a hands-on frontend training program focused on building responsive and user-friendly web applications.",
     responsibilities: [
-      "Built responsive user interfaces with React and Tailwind CSS.",
-      "Integrated REST APIs and improved frontend performance.",
-      "Collaborated on team projects using Git and GitHub.",
+      "Built responsive user interfaces with React and Tailwind CSS for multiple client-facing projects.",
+      "Integrated REST APIs into frontend components, managing async data flows and error states.",
+      "Collaborated on team projects using Git and GitHub for version control and code reviews.",
     ],
     type: "training",
-  },
-  {
-    role: "Administrative Assistant (SIWES)",
-    company: "Local Government Council – Budget Department",
-    duration: "2024 (6 months)",
-    description:
-      "Supported budget operations and data organization while developing analytical and teamwork skills.",
-    responsibilities: [
-      "Maintained accurate records and financial documents.",
-      "Prepared and reviewed budget-related reports.",
-      "Assisted in administrative and data organization tasks.",
-    ],
-    type: "work",
   },
 ];
 
 export const projects: Project[] = [
   {
+    title: "GigTax – Freelance Tax Calculator",
+    overview:
+      "A free, production-grade freelance tax calculator covering 53+ countries. Built with Next.js 15 and TypeScript, it helps freelancers calculate income tax, expenses, and net earnings with country-specific tax brackets and regional breakdowns.",
+    client: "General Public (Freelancers Worldwide)",
+    services: "Full Stack Development & SEO",
+    role: "Full Stack Developer",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Vercel",
+      "Vercel Analytics",
+      "Google AdSense",
+    ],
+    features: [
+      "Tax calculations for 53+ countries with accurate regional brackets",
+      "Custom SVG donut chart for tax summary visualization",
+      "Full SEO infrastructure: sitemap, robots.txt, JSON-LD structured data, canonical tags",
+      "Static generation with generateStaticParams for all country/region routes",
+      "AdSense ad slot system with placeholder/live switching via environment variable",
+      "Vercel Analytics and Speed Insights for performance monitoring",
+      "Contextual not-found pages per country route",
+    ],
+    images: ["/project/gigtax-01.png", "/project/gigtax-02.png"],
+    liveHref: "https://gigtax.xyz",
+    githubHref: "https://github.com/djtimog/gigtax",
+    path: "gigtax",
+    year: "2026",
+    duration: "2 weeks",
+    projectType: "Full Stack Project",
+    highlight:
+      "A live, production-grade SaaS tool used by freelancers across 53+ countries to calculate tax obligations, built and launched solo with full SEO and monetization infrastructure.",
+    references: [
+      {
+        label: "Live Site",
+        value: "gigtax.xyz",
+        link: "https://gigtax.xyz",
+      },
+    ],
+  },
+  {
     title: "TaskFlow – Full Stack Task Management App",
     overview:
-      "A full-stack task management application that allows users to create, manage, and track tasks with authentication and real-time state updates. Built with modern frontend and backend technologies.",
+      "A full-stack task management application that allows users to create, manage, and track tasks with authentication, task assignment, comments, and real-time state updates.",
     client: "Personal Project",
     services: "Full Stack Development",
     role: "Full Stack Developer",
@@ -417,12 +437,13 @@ export const projects: Project[] = [
     ],
     features: [
       "User authentication with JWT",
-      "Create, update, and delete tasks",
+      "Create, update, delete and assign tasks to team members",
+      "Comments and messaging system on tasks",
       "State management using Redux Toolkit",
       "Server state handling with React Query",
-      "RESTful API built with Express",
-      "MongoDB database integration",
-      "Responsive UI with Tailwind CSS",
+      "RESTful API built with Express and documented in Postman",
+      "MongoDB database integration with Mongoose schemas",
+      "Responsive UI with dark mode support",
     ],
     images: ["/project/taskflow-01.png", "/project/taskflow-02.png"],
     liveHref: "https://task-flow-dpj4.onrender.com/",
@@ -432,7 +453,7 @@ export const projects: Project[] = [
     duration: "1 week",
     projectType: "Full Stack Project",
     highlight:
-      "A complete full-stack task management system showcasing my ability to build scalable applications with authentication, API design, and modern frontend architecture.",
+      "A complete full-stack task management system showcasing end-to-end ownership of API design, authentication, database architecture, and modern frontend.",
     references: [
       {
         label: "Spraditech Welcome Test",
@@ -440,87 +461,85 @@ export const projects: Project[] = [
         link: "https://spraditech.vercel.app",
       },
       {
-        label: "Full stack open",
+        label: "Full Stack Open",
         value: "Fullstackopen",
         link: "https://fullstackopen.com/",
       },
     ],
   },
   {
-    title: "Meme Generator App",
+    title: "GitHub Repository Browser – React Native App",
     overview:
-      "An interactive meme generator that allows users to create and customize memes with draggable text, styling options, and image export functionality.",
-    client: "Personal Project",
-    services: "Frontend Development",
-    role: "Frontend Developer",
+      "A cross-platform mobile and web application built with React Native and Expo that fetches and browses GitHub repositories using the GitHub GraphQL API with Apollo Client v3.",
+    client: "University of Helsinki – Full Stack Open",
+    services: "Mobile App Development",
+    role: "Mobile Developer",
     technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Radix UI",
-      "html2canvas",
+      "React Native",
+      "Expo SDK 54",
+      "GraphQL",
+      "Apollo Client v3",
+      "Formik",
+      "Yup",
+      "react-router-native",
     ],
     features: [
-      "Drag and position text on images",
-      "Customize font, color, and size",
-      "Generate and download memes",
-      "Responsive and interactive UI",
-      "Canvas-based rendering using html2canvas",
+      "Fetches live GitHub repository data using the GitHub GraphQL API",
+      "Apollo Client v3 with custom useQuery hooks for efficient caching",
+      "Cross-platform support for iOS and Web via Expo",
+      "Authentication flow with Formik and Yup form validation",
+      "react-router-native navigation between screens",
+      "Resolved complex Windows/Metro bundler ESM scheme errors",
     ],
-    images: ["/project/meme-01.png", "/project/meme-02.png"],
-    liveHref: "https://meme-generator-six-rust.vercel.app/",
-    githubHref: "https://github.com/djtimog/meme-generator",
-    path: "meme-generator",
-    year: "2025",
-    duration: "3 days",
-    projectType: "Personal Project",
+    images: [
+      "/project/github-browser-01.png",
+      "/project/github-browser-02.png",
+    ],
+    liveHref: "",
+    githubHref: "https://github.com/djtimog/rate-repository-app",
+    path: "github-browser",
+    year: "2026",
+    duration: "2 weeks",
+    projectType: "Full Stack Open – React Native Module",
     highlight:
-      "A fun and interactive meme generator showcasing advanced UI interactions, drag-and-drop functionality, and dynamic rendering.",
+      "A production-grade React Native app built as the capstone project for the University of Helsinki Full Stack Open React Native module, demonstrating GraphQL, Apollo Client, and cross-platform mobile development.",
     references: [
       {
-        label: "Canva Design",
-        value: "canva",
-        link: "https://canva.com/",
+        label: "Course",
+        value: "Full Stack Open React Native",
+        link: "https://fullstackopen.com/en/part10",
       },
     ],
   },
   {
-    title: "ChefClaude AI Recipe",
+    title: "ChefClaude – AI Recipe Generator",
     overview:
-      "A Vite-powered React library that integrates AI models (Gemini and HuggingFace) to generate and suggest recipes based on user-provided ingredients. Designed as a reusable component library for modern web apps.",
-    client: "My Ex-Girlfriend",
-    services: "Frontend Library Development",
+      "A web application that integrates with the Anthropic Claude API to generate real-time recipes based on ingredients a user has at home. Originally built as a personal project for a close friend.",
+    client: "Personal Project",
+    services: "Frontend Development & AI Integration",
     role: "Frontend Developer",
-    technologies: [
-      "Vite",
-      "React DOM",
-      "@google/genai",
-      "TypeScript",
-      "Plugin React (Vite)",
-    ],
+    technologies: ["React", "TypeScript", "Anthropic Claude API", "Vite"],
     features: [
-      "Reusable React components for recipe generation",
-      "Integration with Gemini AI APIs",
-      "Ingredient-based recipe suggestions",
+      "Programmatic API calls to the Anthropic Claude API",
+      "Ingredient-based recipe generation in real time",
+      "Prompt engineering for consistent, structured recipe output",
+      "Graceful error handling for API failures and timeouts",
       "Lightweight Vite build system",
-      "Linting and hooks support via ESLint",
-      "Preview mode with Vite",
-      "TypeScript type safety for React components",
     ],
     images: ["/project/chefclaude-01.png", "/project/chefclaude-02.png"],
     liveHref: "https://chef-claude-one.vercel.app/",
     githubHref: "https://github.com/djtimog/Chef-Claude",
     path: "chefclaude",
     year: "2025",
-    duration: "1 Week",
+    duration: "1 week",
     projectType: "Personal Project",
     highlight:
-      "A modern Vite + React library that leverages AI APIs to create intelligent recipe components for web developers.",
+      "My first AI-integrated project — built to solve a real everyday problem using the Anthropic Claude API with custom prompt engineering for reliable recipe output.",
     references: [
       {
         label: "AI",
-        value: "Gemini API",
-        link: "https://ai.google.dev/",
+        value: "Anthropic Claude API",
+        link: "https://www.anthropic.com/",
       },
       {
         label: "Build Tool",
@@ -532,7 +551,7 @@ export const projects: Project[] = [
   {
     title: "Halloween AI Story Website",
     overview:
-      "A Node.js-powered website that allows users to submit stories and uses AI to determine if a story is scary or not. Includes email subscription, story filtering, and a clean static frontend served with a custom Node HTTP server.",
+      "A Node.js-powered website that allows users to submit stories and uses Gemini AI to determine if a story is scary or not. Includes email subscription, story filtering, and a clean static frontend served with a custom Node HTTP server.",
     client: "General Public (Readers & Horror Fans)",
     services: "Backend Web App Development",
     role: "Full Stack Developer",
@@ -554,18 +573,16 @@ export const projects: Project[] = [
       "Email subscription for daily stories",
       "Jest testing with ignored files configuration",
       "Static file serving for HTML/CSS/JS",
-      "Automatic metadata for SEO",
-      "Daily story scheduling support (optional)",
     ],
     images: ["/project/halloween-01.png", "/project/halloween-02.png"],
     liveHref: "https://halloween-zyop.onrender.com",
     githubHref: "https://github.com/djtimog/halloween",
     path: "halloween-stories",
     year: "2025",
-    duration: "1 Week",
+    duration: "1 week",
     projectType: "Personal Project",
     highlight:
-      "An AI-enhanced Halloween storytelling site where users can submit stories, join a mailing list, and receive daily spooky stories powered by Gemini AI.",
+      "An AI-enhanced Halloween storytelling site where users submit stories, join a mailing list, and receive daily spooky stories powered by Gemini AI — built without Express to deepen Node.js fundamentals.",
     references: [
       {
         label: "AI",
@@ -581,11 +598,6 @@ export const projects: Project[] = [
         label: "Email",
         value: "Nodemailer Docs",
         link: "https://nodemailer.com/",
-      },
-      {
-        label: "Inspiration",
-        value: "Scrimba Developer Project",
-        link: "https://www.youtube.com/watch?v=LzMnsfqjzkA&t=122109s",
       },
     ],
   },
@@ -624,17 +636,8 @@ export const projects: Project[] = [
     duration: "Ongoing",
     projectType: "Personal Project",
     highlight:
-      "An esports hub where gamers can host tournaments, form teams, and manage matches in real time.",
+      "An esports hub where gamers can host tournaments, form teams, and manage matches in real time — the early concept for BracketRush.",
     references: [
-      {
-        label: "Design",
-        value: "Figma Wireframes",
-        link: "https://www.figma.com/design/rlvPx8Ga2ACVfqKkmMTZwe/Esport-Gaming-Team-Landing-Page--Community-?m=auto&t=HLJAtxGEbzJk8Zvh-6",
-      },
-      {
-        label: "Inspiration",
-        value: "Call of Duty Mobile; I was inspired by the love of this game",
-      },
       {
         label: "Realtime",
         value: "Pusher Docs",
@@ -648,9 +651,41 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Meme Generator App",
+    overview:
+      "An interactive meme generator that allows users to create and customize memes with draggable text, styling options, and image export functionality.",
+    client: "Personal Project",
+    services: "Frontend Development",
+    role: "Frontend Developer",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "html2canvas",
+    ],
+    features: [
+      "Drag and position text on images",
+      "Customize font, color, and size",
+      "Generate and download memes",
+      "Responsive and interactive UI",
+      "Canvas-based rendering using html2canvas",
+    ],
+    images: ["/project/meme-01.png", "/project/meme-02.png"],
+    liveHref: "https://meme-generator-six-rust.vercel.app/",
+    githubHref: "https://github.com/djtimog/meme-generator",
+    path: "meme-generator",
+    year: "2025",
+    duration: "3 days",
+    projectType: "Personal Project",
+    highlight:
+      "A fun and interactive meme generator showcasing advanced UI interactions, drag-and-drop functionality, and dynamic canvas rendering.",
+    references: [],
+  },
+  {
     title: "Weather Forecast App",
     overview:
-      "A clean, responsive weather app that provides real-time forecasts and location-based updates.",
+      "A clean, responsive weather app that provides real-time forecasts and location-based updates using the OpenWeather API.",
     client: "Self",
     services: "Frontend Development",
     role: "Frontend Developer",
@@ -663,7 +698,7 @@ export const projects: Project[] = [
       "React Snowfall",
     ],
     features: [
-      "Live weather updates using API",
+      "Live weather updates using OpenWeather API",
       "Automatic location detection",
       "Search by city or coordinates",
       "Responsive UI with forecast display",
@@ -682,104 +717,6 @@ export const projects: Project[] = [
         label: "API",
         value: "OpenWeather API",
         link: "https://openweathermap.org/api",
-      },
-      {
-        label: "Design",
-        value: "Frontend Mentor challenge",
-        link: "https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49",
-      },
-      {
-        label: "Inspiration",
-        value: "Frontend Mentor challenge",
-        link: "https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49",
-      },
-    ],
-  },
-
-  {
-    title: "Next.js Dashboard App",
-    overview:
-      "A full-featured admin dashboard built with Next.js, showcasing authentication, database integration, and modern UI components.",
-    client: "Self (Next.js Official Tutorial)",
-    services: "Frontend Development & Authentication",
-    role: "Frontend Developer",
-    technologies: [
-      "Next.js 15",
-      "Next Auth v5",
-      "Vercel Postgres",
-      "Tailwind CSS",
-      "TypeScript",
-      "Zod",
-    ],
-    features: [
-      "User authentication using NextAuth",
-      "PostgreSQL database with Vercel integration",
-      "Responsive dashboard with charts and tables",
-      "Dynamic routes and layouts using Next.js App Router",
-      "Form validation using Zod",
-      "Secure password hashing with bcrypt",
-    ],
-    images: ["/project/acme-01.png", "/project/acme-02.png"],
-    liveHref: "https://acme-gamma-three.vercel.app/",
-    githubHref: "https://github.com/djtimog/nextJsApp/",
-    path: "next-dashboard",
-    year: "2025",
-    duration: "1 weeks",
-    projectType: "Learning Project",
-    highlight:
-      "A comprehensive learning project from the Next.js official tutorial that demonstrates full-stack functionality with authentication and data management.",
-    references: [
-      {
-        label: "Tutorial",
-        value: "Next.js Official Guide",
-        link: "https://nextjs.org/learn",
-      },
-      {
-        label: "Auth",
-        value: "NextAuth Docs",
-        link: "https://authjs.dev",
-      },
-      {
-        label: "Database",
-        value: "Vercel Postgres Docs",
-        link: "https://vercel.com/docs/storage/vercel-postgres",
-      },
-    ],
-  },
-  {
-    title: "Tic Tac Toe Game",
-    overview:
-      "An interactive two-player Tic Tac Toe game built with Next.js, focusing on responsive design, clean UI, and smooth gameplay logic.",
-    client: "Self",
-    services: "Frontend Development",
-    role: "Frontend Developer",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    features: [
-      "Two-player mode with real-time game logic",
-      "Dynamic board updates with turn indicators",
-      "Win and draw detection system",
-      "Responsive and minimal UI design",
-      "Restart and reset functionality",
-    ],
-    images: ["/project/tic-01.png", "/project/tic-02.png"],
-    liveHref: "https://tic-tac-toe-neon-xi.vercel.app",
-    githubHref: "https://github.com/djtimog/tic-tac-toe",
-    path: "tic-tac-toe",
-    year: "2024",
-    duration: "2 days",
-    projectType: "Personal Project",
-    highlight:
-      "A simple yet engaging two-player Tic Tac Toe game showcasing game logic implementation, responsive design, and UI interaction in Next.js.",
-    references: [
-      {
-        label: "Logic Inspiration",
-        value: "React Tic Tac Toe Docs",
-        link: "https://react.dev/learn/tutorial-tic-tac-toe",
-      },
-      {
-        label: "Design",
-        value: "React Tic Tac Toe Docs",
-        link: "https://react.dev/learn/tutorial-tic-tac-toe",
       },
     ],
   },
@@ -815,59 +752,12 @@ export const projects: Project[] = [
     duration: "2 weeks",
     projectType: "Team Project",
     highlight:
-      "Developed a responsive and visually engaging homepage from a Figma design as part of the TeachMaster program. This project improved my design-to-code workflow and leadership experience.",
+      "Developed a responsive and visually engaging homepage from a Figma design as part of the TeachMaster program, leading a team and improving my design-to-code workflow.",
     references: [
       {
         label: "Design",
         value: "Figma Mockup",
         link: "https://www.figma.com/design/5hb9TYUm3OrazIzQdXCV6R/languageacad?m=auto&t=HLJAtxGEbzJk8Zvh-6",
-      },
-      {
-        label: "Icons",
-        value: "Bootstrap Icons",
-        link: "https://icons.getbootstrap.com",
-      },
-      {
-        label: "Library",
-        value: "Swiper.js",
-        link: "https://swiperjs.com",
-      },
-    ],
-  },
-
-  {
-    title: "Easybank Landing Page",
-    overview:
-      "A responsive and modern landing page built for the Easybank Frontend Mentor challenge. The design focuses on clean layouts, accessibility, and smooth responsiveness across devices.",
-    client: "Frontend Mentor Challenge",
-    services: "UI/Frontend Development",
-    role: "Frontend Developer",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    features: [
-      "Fully responsive design for all screen sizes",
-      "Reusable and well-structured components",
-      "Pixel-perfect implementation of the given design",
-      "Accessible and SEO-friendly layout",
-    ],
-    images: ["/project/easybank-01.png", "/project/easybank-02.png"],
-    liveHref: "https://easybank-mauve.vercel.app/",
-    githubHref: "https://github.com/djtimog/easybank",
-    path: "easybank-landing",
-    year: "2024",
-    duration: "2 days",
-    projectType: "Frontend Mentor Challenge",
-    highlight:
-      "My first Tailwind CSS project , focused on building a visually appealing, pixel-perfect homepage from a Figma design challenge.",
-    references: [
-      {
-        label: "Challenge",
-        value: "Frontend Mentor Design",
-        link: "https://frontendmentor.io",
-      },
-      {
-        label: "Design System",
-        value: "Easybank Style Guide",
-        link: "https://frontendmentor.io/challenges",
       },
     ],
   },
